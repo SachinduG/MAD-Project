@@ -11,34 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< Updated upstream
-        <activity android:name=".history"></activity>
+        <activity android:name=".Changepassword"></activity>
+        <activity android:name=".history" />
         <activity android:name=".EditAccount" />
-        <activity android:name=".AccountControl" />
+        <activity android:name=".AccountControl" ><intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    </activity>
         <activity android:name=".Feedback" />
         <activity android:name=".MapNavigate" />
-        <activity android:name=".SignUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".SignUp"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".SignIn" />
         <activity android:name=".Main" />
 
-=======
-        <activity android:name=".Feedback"/>
-        <activity android:name=".MapNavigate"/>
-        <activity android:name=".SignUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".SignIn"/>
-        <activity android:name=".Main"/>
->>>>>>> Stashed changes
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

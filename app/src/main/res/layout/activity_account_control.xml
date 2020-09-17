@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/a6"
-    android:foreground="@drawable/a11"
+
     tools:context=".AccountControl">
 
     <TextView
@@ -41,7 +41,7 @@
         android:layout_width="54dp"
         android:layout_height="22dp"
         android:textColor="#FFEB3B"
-        android:textSize="16SP"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.132"
