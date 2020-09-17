@@ -1,9 +1,6 @@
 package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import android.content.Context;
 import android.content.Intent;
@@ -62,7 +59,7 @@ public class AccountControl extends AppCompatActivity {
                     public void onClick(View view) {
 
 
-                        Intent intent = new Intent(AccountControl.this, Change_Password.class);
+                        Intent intent = new Intent(AccountControl.this, Changepassword.class);
                         startActivity(intent);
                     }
                 }
