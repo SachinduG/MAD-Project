@@ -37,13 +37,14 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                     if (fName.getText().toString().equals("") || fEmail.getText().toString().equals("") || fNic.getText().toString().equals("") || fMobile.getText().toString().equals("") || fAddress.getText().toString().equals("") || fPassword.getText().toString().equals("") || fConfirmPassword.getText().toString().equals("")) {
-                        Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
+                       Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
                     } else if (!fPassword.getText().toString().equals(fConfirmPassword.getText().toString())) {
                         Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
                     } else if (fPassword.getText().toString().length() < 6) {
-                        Toast.makeText(getApplicationContext(), "Password must be => 6 characters!", Toast.LENGTH_LONG).show();
+                        fPassword.setError("Password must be => 6 characters!");
+                        return;
                     } else if (fMobile.getText().toString().length() < 10) {
-                        Toast.makeText(getApplicationContext(), "Mobile number must be => 10 characters!", Toast.LENGTH_LONG).show();
+                        fMobile.setError("Mobile Number must be => 10 characters!");
                     }else {
                         Boolean chkemail = db.chkemail(fEmail.getText().toString());
                         if (chkemail = true) {

@@ -32,9 +32,10 @@ public class MapNavigate extends AppCompatActivity {
                 String sSource = Source.getText().toString().trim();
                 String sDestination = Destination.getText().toString().trim();
 
-                if (sSource.equals("") || sDestination.equals("")) {
-                    Toast.makeText(getApplicationContext()
-                            , "Enter both locations", Toast.LENGTH_LONG).show();
+                if (sSource.equals("")){
+                    Source.setError("Enter your location");
+                }else if(sDestination.equals("")) {
+                    Destination.setError("Enter your destination");
                 }else if(sSource.equals(sDestination)){
                     Toast.makeText(getApplicationContext()
                             , "Enter different locations", Toast.LENGTH_LONG).show();

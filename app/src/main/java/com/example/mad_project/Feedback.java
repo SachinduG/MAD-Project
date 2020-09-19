@@ -33,7 +33,7 @@ public class Feedback extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                btnview.setEnabled(true);
+
                 if (name.getText().toString().equals("") || email.getText().toString().equals("") || message.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
                 }else {
@@ -41,6 +41,7 @@ public class Feedback extends AppCompatActivity {
                     if (insert == true) {
                         Toast.makeText(getApplicationContext(), "Sent Feedback Successfully", Toast.LENGTH_SHORT).show();
                         btnsend.setEnabled(true);
+                        btnview.setEnabled(true);
                     }else{
                         Toast.makeText(getApplicationContext(), "Cannot Sent Feedback", Toast.LENGTH_SHORT).show();
                     }
