@@ -34,11 +34,14 @@ public class MapNavigate extends AppCompatActivity {
 
                 if (sSource.equals("")){
                     Source.setError("Enter your location");
+
                 }else if(sDestination.equals("")) {
                     Destination.setError("Enter your destination");
+
                 }else if(sSource.equals(sDestination)){
                     Toast.makeText(getApplicationContext()
                             , "Enter different locations", Toast.LENGTH_LONG).show();
+
                 }else{
                     DisplayTrack(sSource, sDestination);
                 }
@@ -47,6 +50,7 @@ public class MapNavigate extends AppCompatActivity {
     }
 
     private void DisplayTrack(String sSource, String sDestination){
+
         try{
             Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + sSource + "/"
             + sDestination);
@@ -55,8 +59,10 @@ public class MapNavigate extends AppCompatActivity {
             intent.setPackage("com.google.android.apps.maps");
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
+
             Toast.makeText(getApplicationContext()
                     , "Opening google maps", Toast.LENGTH_LONG).show();
+            clearControls();
 
         }catch (ActivityNotFoundException e){
             Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
@@ -64,5 +70,10 @@ public class MapNavigate extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
+    }
+
+    private void clearControls(){
+        Source.setText("");
+        Destination.setText("");
     }
 }
