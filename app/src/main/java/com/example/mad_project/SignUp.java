@@ -36,30 +36,60 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                    if (fName.getText().toString().equals("") || fEmail.getText().toString().equals("") || fNic.getText().toString().equals("") || fMobile.getText().toString().equals("") || fAddress.getText().toString().equals("") || fPassword.getText().toString().equals("") || fConfirmPassword.getText().toString().equals("")) {
-                        Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
-                    } else if (!fPassword.getText().toString().equals(fConfirmPassword.getText().toString())) {
-                        Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
-                    } else if (fPassword.getText().toString().length() < 6) {
-                        Toast.makeText(getApplicationContext(), "Password must be => 6 characters!", Toast.LENGTH_LONG).show();
-                    } else if (fMobile.getText().toString().length() < 10) {
-                        Toast.makeText(getApplicationContext(), "Mobile number must be => 10 characters!", Toast.LENGTH_LONG).show();
-                    }else {
-                        Boolean chkemail = db.chkemail(fEmail.getText().toString());
-                        if (chkemail = true) {
-                            Boolean insert = db.insert(fName.getText().toString(),fEmail.getText().toString(),fMobile.getText().toString(),fNic.getText().toString(),fAddress.getText().toString(),fPassword.getText().toString());
-                            if(insert==true) {
-                                Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
 
-                                Intent intent = new Intent(getApplicationContext(), Main.class);
-                                startActivity(intent);
-                            }
+                if (fName.getText().toString().equals("")){
+                    fName.setError("Enter the Name");
+
+                }else if(fEmail.getText().toString().equals("")){
+                    fEmail.setError("Enter the Email Address");
+
+                }else if(fNic.getText().toString().equals("")){
+                    fNic.setError("Enter the NIC Number");
+
+                }else if(fMobile.getText().toString().equals("")){
+                    fMobile.setError("Enter the Mobile Number");
+
+                }else if(fAddress.getText().toString().equals("")){
+                    fAddress.setError("Enter the Address");
+
+                }else if(fPassword.getText().toString().equals("")){
+                    fPassword.setError("Enter the Password");
+
+                }else if(fConfirmPassword.getText().toString().equals("")) {
+                    fConfirmPassword.setError("Enter the Confirm Password!");
+
+                }else if(!fPassword.getText().toString().equals(fConfirmPassword.getText().toString())) {
+                    Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
+
+                } else if (fPassword.getText().toString().length() < 6) {
+                    fPassword.setError("Password must be => 6 characters!");
+
+                } else if (fMobile.getText().toString().length() < 10) {
+                    fMobile.setError("Mobile Number must be => 10 characters!");
+
+                }else {
+
+                    Boolean Checkemail = db.chkemail(fEmail.getText().toString());
+
+                    if (Checkemail = true) {
+                        Boolean insert = db.insert(fName.getText().toString(),fEmail.getText().toString(),fMobile.getText().toString(),fNic.getText().toString(),fAddress.getText().toString(),fPassword.getText().toString());
+
+                        if(insert == true) {
+                            Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(getApplicationContext(), Main.class);
+                            startActivity(intent);
+                            clearControls();
+
                         }else{
-                            Toast.makeText(getApplicationContext(), "Email Already Exists!!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registeration Unsuccessfull", Toast.LENGTH_SHORT).show();
                         }
-                    }
-            }
 
+                    }else{
+                        Toast.makeText(getApplicationContext(), "Email Already Exists!!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
         });
 
         SignIn.setOnClickListener(new View.OnClickListener(){
@@ -68,5 +98,15 @@ public class SignUp extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SignIn.class));
             }
         });
+    }
+
+    private void clearControls(){
+        fName.setText("");
+        fEmail.setText("");
+        fMobile.setText("");
+        fNic.setText("");
+        fAddress.setText("");
+        fPassword.setText("");
+        fConfirmPassword.setText("");
     }
 }

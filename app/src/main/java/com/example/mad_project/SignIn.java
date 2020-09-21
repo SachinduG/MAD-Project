@@ -30,19 +30,24 @@ public class SignIn extends AppCompatActivity {
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Boolean Chkemailpass = db.emailpassword(etEmail.getText().toString(), etPassword.getText().toString());
-                if(Chkemailpass==true){
+
+                Boolean CheckUser = db.emailpassword(etEmail.getText().toString(), etPassword.getText().toString());
+
+                if(CheckUser == true){
                     Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), Main.class);
                     startActivity(intent);
-                }else if(etEmail.getText().toString().equals("") || etPassword.getText().toString().equals("")){
-                    Toast.makeText(getApplicationContext(), "All Fields must be filled!",Toast.LENGTH_SHORT).show();
-                }
-                else{
+
+                }else if(etEmail.getText().toString().equals("")){
+                    etEmail.setError("Enter your Email Address");
+
+                }else if(etPassword.getText().toString().equals("")){
+                    etPassword.setError("Enter your Password");
+
+                }else{
                     Toast.makeText(getApplicationContext(), "Wrong Email Address or Password",Toast.LENGTH_SHORT).show();
                 }
-
             }
         });
 
