@@ -109,7 +109,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/BookSubmit"
+        android:id="@+id/BookSubmit1"
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
         android:layout_width="111dp"
         android:layout_height="48dp"
@@ -131,7 +131,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="Booking profile"
         android:textAlignment="center"
-        android:textColor="#DD1212"
+        android:textColor="#12DD2D"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

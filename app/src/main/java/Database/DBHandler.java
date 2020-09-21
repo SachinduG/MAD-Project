@@ -1,6 +1,7 @@
 package Database;
 
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -41,5 +42,28 @@ public class DBHandler extends SQLiteOpenHelper {
     private static final String SQL_DELETE_ENTRIES =
             "DROP TABLE IF EXISTS " + BOOKUser.User.TABLE_NAME;
 
+
+
+
+    public long Addinformation(String name,String email,String nic,String mobile){
+
+
+
+        // Gets the data repository in write mode
+        SQLiteDatabase db = getWritableDatabase();
+
+// Create a new map of values, where column names are the keys
+        ContentValues values = new ContentValues();
+        values.put(BOOKUser.User.COLUMN_1, name);
+        values.put(BOOKUser.User.COLUMN_2, email);
+        values.put(BOOKUser.User.COLUMN_3, nic);
+        values.put(BOOKUser.User.COLUMN_4, mobile);
+
+
+// Insert the new row, returning the primary key value of the new row
+        long newRowId = db.insert(BOOKUser.User.TABLE_NAME, null, values);
+
+        return  newRowId;
+    }
 
 }
