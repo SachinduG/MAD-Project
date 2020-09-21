@@ -37,5 +37,10 @@
     <string name="BOOKemail">Email</string>
     <string name="BOOKNIC">NIC</string>
     <string name="BOOKmobile">Mobile</string>
+    <string name="bookdelete">Bookdelete</string>
+    <string name="bookupdate">Bookupdate</string>
+    <string name="BUpdate">Update</string>
+    <string name="Bdelete">Delete</string>
+    <string name="Bsearch">Search</string>
 
 </resources>
