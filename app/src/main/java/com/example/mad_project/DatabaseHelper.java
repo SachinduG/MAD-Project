@@ -39,6 +39,54 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public Boolean update(String name, String email, String mobile, String nic, String address, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("name",name);
+        contentValues.put("email",email);
+        contentValues.put("mobile",mobile);
+        contentValues.put("nic",nic);
+        contentValues.put("address",address);
+        contentValues.put("password",password);
+        Cursor cursor = db.rawQuery("Select * from User where name = ?", new String[]{name});
+        if (cursor.getCount() > 0) {
+            long result = db.update("User", contentValues, "name=?", new String[]{name});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }}
+
+    public Boolean delete (String name)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from User where name = ?", new String[]{name});
+        if (cursor.getCount() > 0) {
+            long result = db.delete("User", "name=?", new String[]{name});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+
+    }
+
+    public Cursor get ()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from User", null);
+        return cursor;
+
+    }
+
+
+
     public Boolean insert(String name, String email, String message){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();

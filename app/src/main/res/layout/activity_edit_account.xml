@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/a51"
     tools:context=".EditAccount">
 
     <TextView
@@ -12,28 +13,28 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
         android:text="@string/edit_your_account"
-        android:textColor="#FF5722"
+        android:textColor="#F8F5F4"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.039" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="404dp"
-        android:layout_height="562dp"
+        android:layout_width="380dp"
+        android:layout_height="532dp"
         android:layout_marginTop="2dp"
-        android:background="#EDC90D"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.132">
+        app:layout_constraintVertical_bias="0.0">
 
         <EditText
             android:id="@+id/etName"
@@ -41,11 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:autofillHints=""
-            android:background="#F4E877"
+            android:background="#FFC400"
             android:ems="10"
             android:hint="@string/etName"
             android:inputType="textPersonName"
-            android:padding="22dp"
+            android:padding="20dp"
             android:textColor="#550ED3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -56,11 +57,11 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:autofillHints=""
-            android:background="#FFF4E877"
+            android:background="#FFC400"
             android:ems="10"
             android:hint="@string/etEmail"
             android:inputType="textPersonName"
-            android:padding="22dp"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -69,11 +70,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#FFF4E877"
+            android:background="#FFC400"
             android:ems="10"
             android:hint="@string/etMobile"
             android:inputType="textPersonName"
-            android:padding="22dp"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -82,11 +83,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#FFF4E877"
+            android:background="#FFC400"
             android:ems="10"
             android:hint="@string/etNic"
             android:inputType="textPersonName"
-            android:padding="22dp"
+            android:padding="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -95,11 +96,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:background="#FFF4E877"
+            android:background="#FFC400"
             android:ems="10"
             android:hint="@string/etAddress"
             android:inputType="textPersonName"
-            android:padding="35dp"
+            android:padding="28dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -109,15 +110,14 @@
         android:id="@+id/Update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
         android:background="#03A9F4"
         android:text="@string/Update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/cancel"
@@ -127,9 +127,9 @@
         android:text="@string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.604"
+        app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toEndOf="@+id/Update"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.567" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
