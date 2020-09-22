@@ -47,5 +47,10 @@
     <string name="Forgotpassword">Forgot your password?</string>
     <string name="btnChangePassword">Change Password</string>
     <string name="header5">Change your password</string>
+    <string name="CHOOSE_IMAGE">Choose Image</string>
+    <string name="addparkingEmail">Email</string>
+    <string name="addparkingTown">Town</string>
+    <string name="addparkingAddress">Address</string>
+    <string name="addparkingHeader">Add your parking lot</string>
 
 </resources>

@@ -89,10 +89,10 @@ public class SignUp extends AppCompatActivity {
                 }else {
                     Boolean Checkemail = db.chkemail(fEmail.getText().toString());
 
-                    if (Checkemail = true) {
+                    if (Checkemail.equals(true)) {
                         Boolean insert = db.insert(FullName,Email,Mobile,Nic,Address,Password);
 
-                        if(insert == true) {
+                        if(insert.equals(true)) {
                             Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(getApplicationContext(), Main.class);

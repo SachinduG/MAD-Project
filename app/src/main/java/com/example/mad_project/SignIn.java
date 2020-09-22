@@ -37,7 +37,7 @@ public class SignIn extends AppCompatActivity {
 
                 Boolean CheckUser = db.emailpassword(Email, Password);
 
-                if(CheckUser == true){
+                if(CheckUser.equals(true)){
                     Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), Main.class);

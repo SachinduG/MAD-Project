@@ -48,7 +48,7 @@ public class Feedback extends AppCompatActivity {
                 }else {
                     Boolean insert = db.insert(FullName, Email, Message);
 
-                    if (insert == true) {
+                    if (insert.equals(true)) {
                         Toast.makeText(getApplicationContext(), "Sent Feedback Successfully", Toast.LENGTH_SHORT).show();
                         btnsend.setEnabled(true);
                         btnview.setEnabled(true);

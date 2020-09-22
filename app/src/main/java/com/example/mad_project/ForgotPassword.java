@@ -31,10 +31,11 @@ public class ForgotPassword extends AppCompatActivity {
 
                 Boolean CheckUser = db.checkUser(Email.getText().toString());
 
-                if (CheckUser == true) {
+                if (CheckUser.equals(true)) {
                     Toast.makeText(getApplicationContext(), "Validate Email Address", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), ResetPassword.class);
-                    startActivity(intent);
+                    Intent i = new Intent(getApplicationContext(), ResetPassword.class);
+                    i.putExtra("EMAIL", EmailAddress);
+                    startActivity(i);
                     clearControls();
 
                 }else if(EmailAddress.matches(EmailPattern)){
