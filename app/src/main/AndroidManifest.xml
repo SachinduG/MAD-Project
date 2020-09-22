@@ -11,20 +11,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".history"></activity>
+        <activity android:name=".Addparking"></activity>
+        <activity android:name=".history" />
         <activity android:name=".EditAccount" />
         <activity android:name=".AccountControl" />
         <activity android:name=".Feedback" />
-        <activity android:name=".MapNavigate" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MapNavigate">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".SignUp"/>
+        <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".Main" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
