@@ -11,8 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Addparking"></activity>
+        <activity android:name=".BOOKPayment"></activity>
+        <activity android:name=".Addparking" />
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
         <activity android:name=".AccountControl" />
@@ -24,15 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditBookingProfile"></activity>
+        <activity android:name=".EditBookingProfile" />
         <activity android:name=".BookingProfileManagement" />
-        <activity android:name=".BookingHome"></activity>
+        <activity android:name=".BookingHome" />
         <activity android:name=".Changepassword" />
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".Main" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>
