@@ -31,13 +31,17 @@ public class EditAccount extends AppCompatActivity {
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (fName.getText().toString().equals("") || fEmail.getText().toString().equals("") || fNic.getText().toString().equals("") || fMobile.getText().toString().equals("") || fAddress.getText().toString().equals("")  ) {
+                if (fName.getText().toString().equals("") || fEmail.getText().toString().equals("") || fNic.getText().toString().equals("") || fMobile.getText().toString().equals("") || fAddress.getText().toString().equals("")) {
                     Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
-                } else  (fMobile.getText().toString().length() < 10) {
+                } else if (fMobile.getText().toString().length() < 10) {
                     Toast.makeText(getApplicationContext(), "Mobile number must be => 10 characters!", Toast.LENGTH_LONG).show();
-                }else {
+                } else {
                     Boolean chkemail = db.chkemail(fEmail.getText().toString());
                     if (chkemail = true) {
 
+                    }
+                }
+            }
+        });
     }
 }
