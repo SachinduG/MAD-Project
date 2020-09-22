@@ -33,6 +33,7 @@
     <string name="logout">Logout</string>
     <string name="Update">Done</string>
     <string name="cancel">Cancel</string>
+    <string name="add_your_parking_lot">Add your Parking Lot</string>
     <string name="BOOkname">Name</string>
     <string name="BOOKemail">Email</string>
     <string name="BOOKNIC">NIC</string>
@@ -42,5 +43,6 @@
     <string name="BUpdate">Update</string>
     <string name="Bdelete">Delete</string>
     <string name="Bsearch">Search</string>
+
 
 </resources>
