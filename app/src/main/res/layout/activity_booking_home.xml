@@ -131,7 +131,7 @@
         android:fontFamily="sans-serif-medium"
         android:text="Booking profile"
         android:textAlignment="center"
-        android:textColor="#4527A0"
+        android:textColor="#A0275B"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
