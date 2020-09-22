@@ -26,6 +26,7 @@ public class ForgotPassword extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String EmailAddress = Email.getText().toString().trim();
                 String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Boolean CheckUser = db.checkUser(Email.getText().toString());
@@ -36,8 +37,8 @@ public class ForgotPassword extends AppCompatActivity {
                     startActivity(intent);
                     clearControls();
 
-                }else if(Email.getText().toString().matches(EmailPattern)){
-                        Email.setError("Enter valid Email Address");
+                }else if(EmailAddress.matches(EmailPattern)){
+                        Email.setError("Email Address doesn't exist");
 
                 } else{
                     Email.setError("Enter your Email Address");
