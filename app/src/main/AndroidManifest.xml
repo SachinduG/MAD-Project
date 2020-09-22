@@ -11,8 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".Addparking"/>
         <activity android:name=".BOOKPayment"></activity>
-        <activity android:name=".Addparking" />
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
         <activity android:name=".AccountControl" />
@@ -21,7 +22,6 @@
         <activity android:name=".EditBookingProfile" />
         <activity android:name=".BookingProfileManagement" />
         <activity android:name=".BookingHome" >
-
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
