@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class SignIn extends AppCompatActivity {
     EditText etEmail, etPassword;
     Button SignIn;
-    TextView SignUp;
+    TextView SignUp, Password;
     DatabaseHelper db;
 
     @Override
@@ -22,14 +22,16 @@ public class SignIn extends AppCompatActivity {
         setContentView(R.layout.activity_sign_in);
 
         db = new DatabaseHelper(this);
-        etEmail = findViewById(R.id.email);
-        etPassword = findViewById(R.id.password);
+        etEmail = findViewById(R.id.SigninEmail);
+        etPassword = findViewById(R.id.SigninPassword);
         SignIn = findViewById(R.id.btnSignIn);
         SignUp = findViewById(R.id.tvSignUp);
+        Password = findViewById(R.id.tvPassword);
 
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Boolean CheckUser = db.emailpassword(etEmail.getText().toString(), etPassword.getText().toString());
 
@@ -39,11 +41,14 @@ public class SignIn extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), Main.class);
                     startActivity(intent);
 
-                }else if(etEmail.getText().toString().equals("")){
+                }else if(etEmail.getText().toString().equals(null)){
                     etEmail.setError("Enter your Email Address");
 
-                }else if(etPassword.getText().toString().equals("")){
+                }else if(etPassword.getText().toString().equals(null)) {
                     etPassword.setError("Enter your Password");
+
+                }else if(etEmail.getText().toString().matches(EmailPattern)){
+                    etEmail.setError("Invalid Email Address!");
 
                 }else{
                     Toast.makeText(getApplicationContext(), "Wrong Email Address or Password",Toast.LENGTH_SHORT).show();
@@ -57,6 +62,14 @@ public class SignIn extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), SignUp.class));
             }
 
+        });
+
+        Password.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), ForgotPassword.class));
+            }
         });
     }
 }

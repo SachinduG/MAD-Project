@@ -22,13 +22,13 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         db = new DatabaseHelper(this);
-        fName = findViewById(R.id.name);
-        fEmail = findViewById(R.id.email);
-        fMobile = findViewById(R.id.mobile);
-        fAddress = findViewById(R.id.address);
-        fNic = findViewById(R.id.nic);
-        fPassword = findViewById(R.id.password);
-        fConfirmPassword = findViewById(R.id.password2);
+        fName = findViewById(R.id.SignupName);
+        fEmail = findViewById(R.id.SignupEmail);
+        fMobile = findViewById(R.id.SignupMobile);
+        fAddress = findViewById(R.id.SignupAddress);
+        fNic = findViewById(R.id.SignupNic);
+        fPassword = findViewById(R.id.SignupPassword);
+        fConfirmPassword = findViewById(R.id.SignupPassword2);
         SignIn = findViewById(R.id.tvLogin);
         SignUp = findViewById(R.id.btnSignUp);
 
@@ -37,38 +37,49 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (fName.getText().toString().equals("")){
+                String MobilePattern = "[0-9]{10}";
+                String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+                if (fName.getText().toString().equals(null)){
                     fName.setError("Enter the Name");
 
-                }else if(fEmail.getText().toString().equals("")){
+                }else if(fEmail.getText().toString().equals(null)){
                     fEmail.setError("Enter the Email Address");
 
-                }else if(fNic.getText().toString().equals("")){
+                }else if(fNic.getText().toString().equals(null)){
                     fNic.setError("Enter the NIC Number");
 
-                }else if(fMobile.getText().toString().equals("")){
+                }else if(fMobile.getText().toString().equals(null)){
                     fMobile.setError("Enter the Mobile Number");
 
-                }else if(fAddress.getText().toString().equals("")){
+                }else if(fAddress.getText().toString().equals(null)){
                     fAddress.setError("Enter the Address");
 
-                }else if(fPassword.getText().toString().equals("")){
+                }else if(fPassword.getText().toString().equals(null)){
                     fPassword.setError("Enter the Password");
 
-                }else if(fConfirmPassword.getText().toString().equals("")) {
+                }else if(fConfirmPassword.getText().toString().equals(null)) {
                     fConfirmPassword.setError("Enter the Confirm Password!");
 
                 }else if(!fPassword.getText().toString().equals(fConfirmPassword.getText().toString())) {
-                    Toast.makeText(getApplicationContext(), "Passwords do not match!", Toast.LENGTH_LONG).show();
+                    fPassword.setError("Passwords do not match");
 
                 } else if (fPassword.getText().toString().length() < 6) {
                     fPassword.setError("Password must be => 6 characters!");
 
                 } else if (fMobile.getText().toString().length() < 10) {
-                    fMobile.setError("Mobile Number must be => 10 characters!");
+                    fMobile.setError("Mobile Number must be => 10 numbers!");
+
+                }else if(fNic.getText().toString().length() < 10) {
+                    fNic.setError("NIC Number must be => 10 characters!");
+
+                }else if(fEmail.getText().toString().matches(EmailPattern)){
+                    fEmail.setError("Invalid Email Address!");
+
+                }else if(fMobile.getText().toString().matches(MobilePattern)){
+                    fMobile.setError("Invalid Mobile Number!");
 
                 }else {
-
                     Boolean Checkemail = db.chkemail(fEmail.getText().toString());
 
                     if (Checkemail = true) {
