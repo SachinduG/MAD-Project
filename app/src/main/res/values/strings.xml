@@ -42,10 +42,5 @@
     <string name="BUpdate">Update</string>
     <string name="Bdelete">Delete</string>
     <string name="Bsearch">Search</string>
-    <string name="header4">Enter Your Email Address</string>
-    <string name="btnEmail">Confirm</string>
-    <string name="Forgotpassword">Forgot your password?</string>
-    <string name="btnChangePassword">Change Password</string>
-    <string name="header5">Change your password</string>
 
 </resources>
