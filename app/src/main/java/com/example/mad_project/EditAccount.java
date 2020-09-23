@@ -12,10 +12,14 @@ import android.widget.Toast;
 
 public class EditAccount extends AppCompatActivity {
 
-    EditText fName, fEmail, fMobile, fAddress, fNic, fPassword,fConfirmPassword;
-    Button Update, Cancel;
+    EditText fName, fEmail, fMobile, fAddress, fNic, fPassword, fConfirmPassword;
+    Button Update, delete;
     DatabaseHelper db;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f660074a2f0b1e1b66417d983555ca23c392e2be
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +33,7 @@ public class EditAccount extends AppCompatActivity {
         fNic = findViewById(R.id.nic);
         fPassword = findViewById(R.id.password);
         Update = findViewById(R.id.Update);
+        delete = findViewById(R.id.button7);
 
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,14 +65,49 @@ public class EditAccount extends AppCompatActivity {
                     fMobile.setError("Mobile Number must be => 10 characters!");
 
                 } else {
-                    db.update(fName.getText().toString(), fEmail.getText().toString(), fNic.getText().toString(),fMobile.getText().toString(),fAddress.getText().toString(),fPassword.getText().toString());
+                    db.update(fName.getText().toString(), fEmail.getText().toString(), fNic.getText().toString(), fMobile.getText().toString(), fAddress.getText().toString(), fPassword.getText().toString());
 
                     Toast.makeText(EditAccount.this, "Entry Updated", Toast.LENGTH_SHORT).show();
 
                 }
             }
         });
+
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String Email = fEmail.getText().toString();
+                Boolean checkudeletedata = db.delete(Email);
+                if (checkudeletedata == true) {
+                    Toast.makeText(EditAccount.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(EditAccount.this, "Entry Not Deleted", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
+}
+
+
+
+
+    /*public void onClick(View view) {
+        Cursor res = db.get();
+        if(res.getCount()==0){
+            Toast.makeText(EditAccount.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        StringBuffer buffer = new StringBuffer();
+        while(res.moveToNext()){
+            buffer.append("Name :"+res.getString(0)+"\n");
+            buffer.append("Contact :"+res.getString(1)+"\n");
+            buffer.append("Date of Birth :"+res.getString(2)+"\n\n");
+        }
 }
 
 
