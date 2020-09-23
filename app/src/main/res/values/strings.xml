@@ -50,5 +50,6 @@
     <string name="addres">Addres</string>
     <string name="address">Address</string>
     <string name="rate_per_hour">Rate per Hour</string>
+    <string name="addemail">Email</string>
 
 </resources>
