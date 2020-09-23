@@ -31,12 +31,14 @@ public class ForgotPassword extends AppCompatActivity {
                 String Password1 = Pass1.getText().toString().trim();
                 String Password2 = Pass2.getText().toString().trim();
                 String EmailAddress = Email.getText().toString().trim();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Boolean CheckUser = db.checkUser(Email.getText().toString());
 
                 if (CheckUser.equals(false)) {
                     Email.setError("Email Address doesn't exist");
-                }else if(Email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
+
+                }else if(!Email.getText().toString().matches(emailPattern)) {
                    Email.setError("Email Address is a not valid one");
 
                 }else if(EmailAddress.isEmpty()){

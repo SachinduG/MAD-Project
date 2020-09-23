@@ -12,44 +12,26 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Addparking"/>
+        <activity android:name=".Addparking"></activity>
         <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2"></activity>
-
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".Changepassword" />
-
-        <activity android:name=".history" />
-        <activity android:name=".EditAccount"/>
-        <activity android:name=".AccountControl" />
-        <activity android:name=".Feedback" />
-
-        <activity android:name=".EditBookingProfile" />
-        <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" />
-        <activity android:name=".BookingHome"  android:theme="@style/AppTheme2">
+        <activity android:name=".ForgotPassword" ></activity>
+        <activity android:name=".Changepassword" ></activity>
+        <activity android:name=".history" ></activity>
+        <activity android:name=".EditAccount"></activity>
+        <activity android:name=".AccountControl" ></activity>
+        <activity android:name=".Feedback" ></activity>
+        <activity android:name=".EditBookingProfile" ></activity>
+        <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" ></activity>
+        <activity android:name=".BookingHome"  android:theme="@style/AppTheme2"></activity>
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".SignUp" />
-        <activity android:name=".SignIn"/>
-        <activity android:name=".Main" />
-<<<<<<< HEAD
-        <activity android:name=".MapNavigate" />
-=======
-
-
-        <activity android:name=".MapNavigate" >
-        </activity>
-
-
-
-
-
-
-
->>>>>>> f660074a2f0b1e1b66417d983555ca23c392e2be
+        <activity android:name=".Main" ></activity>
+        <activity android:name=".MapNavigate" ></activity>
 
         <meta-data
             android:name="preloaded_fonts"

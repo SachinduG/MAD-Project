@@ -31,6 +31,7 @@ public class Feedback extends AppCompatActivity {
 
                 String FullName = name.getText().toString().trim();
                 String Email = email.getText().toString().trim();
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 String Message = message.getText().toString().trim();
 
                 if (FullName.isEmpty()){
@@ -39,7 +40,7 @@ public class Feedback extends AppCompatActivity {
                 }else if(Email.isEmpty()) {
                     email.setError("Fill your Email Address");
 
-                }else if(email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")){
+                }else if(!email.getText().toString().matches(emailPattern)){
                     email.setError("Enter valid Email Address");
 
                 }else if(Message.isEmpty()){
@@ -66,9 +67,17 @@ public class Feedback extends AppCompatActivity {
                                 .setTitle("Your Feedback:")
                                 .setMessage("Full Name :- " + name.getText().toString() + "\n\nEmail Address :- " + email.getText().toString() + "\n\nMessage :- " + message.getText().toString())
                                 .show();
+                        clearControls();
                     }
                 });
             }
         });
+    }
+
+    private void clearControls(){
+        name.setText("");
+        email.setText("");
+        message.setText("");
+
     }
 }

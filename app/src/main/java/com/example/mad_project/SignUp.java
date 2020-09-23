@@ -80,11 +80,11 @@ public class SignUp extends AppCompatActivity {
                 }else if(Nic.length() < 10) {
                     fNic.setError("NIC Number must be => 10 characters!");
 
-                }else if(fEmail.getText().toString().trim().matches(emailPattern)){
+                }else if(!fEmail.getText().toString().trim().matches(emailPattern)){
                     fEmail.setError("Invalid Email Address!");
 
-                //}else if(!fMobile.getText().toString().indexOf){
-                  //  fMobile.setError("Invalid Mobile Number!");
+                }else if(fMobile.getText().toString().matches(mobilePattern)){
+                    fMobile.setError("Invalid Mobile Number!");
 
                 }else {
                     Boolean Checkemail = db.chkemail(fEmail.getText().toString());
