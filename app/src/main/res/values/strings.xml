@@ -42,6 +42,16 @@
     <string name="BUpdate">Update</string>
     <string name="Bdelete">Delete</string>
     <string name="Bsearch">Search</string>
+    <string name="email">Email</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="todo">TODO</string>
+    <string name="town">Town</string>
+    <string name="addres">Addres</string>
+    <string name="address">Address</string>
+    <string name="hours">enter Hours</string>
+    <string name="chargers">chargers</string>
+
+
     <string name="header4">Enter Your Email Address</string>
     <string name="btnEmail">Confirm</string>
     <string name="Forgotpassword">Forgot your password?</string>
@@ -52,5 +62,6 @@
     <string name="addparkingTown">Town</string>
     <string name="addparkingAddress">Address</string>
     <string name="addparkingHeader">Add your parking lot</string>
+
 
 </resources>

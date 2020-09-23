@@ -2,7 +2,9 @@ package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.Int4;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -97,6 +99,9 @@ public class BookingProfileManagement extends AppCompatActivity {
                 mobile.setText(null);
 
                 Toast.makeText(BookingProfileManagement.this, "sucessfully deleted", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(),BOOKPayment.class);
+                startActivity(intent);
 
             }
         });
