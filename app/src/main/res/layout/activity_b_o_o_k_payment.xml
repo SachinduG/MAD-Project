@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".BOOKPayment">
 
+
+    <EditText
+        android:id="@+id/hoursme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
+        android:ems="10"
+        android:hint="@string/hours"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="add"
+        android:text="@string/chargers"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hoursme"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <TextView
+        android:id="@+id/addme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calme" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

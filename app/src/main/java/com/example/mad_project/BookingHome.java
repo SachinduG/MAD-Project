@@ -30,6 +30,7 @@ public class BookingHome extends AppCompatActivity {
         book = findViewById(R.id.BookSubmit1);
 
 
+
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,6 +40,10 @@ public class BookingHome extends AppCompatActivity {
                 long newdetails = dbHandler.Addinformation(name.getText().toString(),email.getText().toString(),nic.getText().toString(),mobile.getText().toString());
 
                 Toast.makeText(BookingHome.this, "added sucessfully"+newdetails, Toast.LENGTH_SHORT).show();
+
+                Intent intent  = new Intent(getApplicationContext(),BookingProfileManagement.class);
+
+                startActivity(intent);
 
 
 
