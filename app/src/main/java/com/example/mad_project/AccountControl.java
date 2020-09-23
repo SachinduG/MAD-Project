@@ -53,19 +53,5 @@ public class AccountControl extends AppCompatActivity {
         );
     }
 
-    public void OnClickButtonLister3(){
-        button = (Button)findViewById(R.id.button2);
-        button.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        Intent intent = new Intent(AccountControl.this, Changepassword.class);
-                        startActivity(intent);
-
-                    }
-                }
-        );
-}
+    
 }

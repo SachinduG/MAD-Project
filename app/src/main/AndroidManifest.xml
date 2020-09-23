@@ -37,13 +37,8 @@
 
 
         <activity android:name=".Main" />
-<<<<<<< HEAD
+
         <activity android:name=".MapNavigate" />
-=======
-
-
-        <activity android:name=".MapNavigate" >
-        </activity>
 
 
 
@@ -51,7 +46,11 @@
 
 
 
->>>>>>> f660074a2f0b1e1b66417d983555ca23c392e2be
+
+
+
+
+
 
         <meta-data
             android:name="preloaded_fonts"

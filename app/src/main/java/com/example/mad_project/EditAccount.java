@@ -16,10 +16,6 @@ public class EditAccount extends AppCompatActivity {
     Button Update, delete;
     DatabaseHelper db;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f660074a2f0b1e1b66417d983555ca23c392e2be
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
