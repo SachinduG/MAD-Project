@@ -12,7 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".Addparking"></activity>
+
+        <activity android:name=".Addparking"/>
+
+
+
         <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2"></activity>
 <<<<<<< HEAD
 =======
@@ -32,18 +36,25 @@
 =======
 
 
-        <activity android:name=".ForgotPassword" />
+
 
         
 >>>>>>> 176c3ad9b757fb482c39c168529acd0db4423946
         <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".Main" ></activity>
+
+
+
+
+        <activity android:name=".Main" />
+
+
         <activity android:name=".MapNavigate" ></activity>
 <<<<<<< HEAD
 =======
@@ -60,6 +71,7 @@
 
 
 >>>>>>> 176c3ad9b757fb482c39c168529acd0db4423946
+
 
         <meta-data
             android:name="preloaded_fonts"
