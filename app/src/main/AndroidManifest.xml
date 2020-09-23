@@ -18,10 +18,10 @@
         <activity android:name=".history" />
 
 
-        <activity android:name=".EditAccount"/> >
+        <activity android:name=".EditAccount"/>
 
 
-        <activity android:name=".AccountControl/" >
+        <activity android:name=".AccountControl" />
         
 
         <activity android:name=".Feedback" />
@@ -41,16 +41,8 @@
         <activity android:name=".MapNavigate" >
         </activity>
 
-        <activity android:name=".EditAccount" />
-        <activity android:name=".AccountControl" />
-        <activity android:name=".SignUp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
+
         
 
         <meta-data
