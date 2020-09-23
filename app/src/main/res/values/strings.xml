@@ -52,5 +52,6 @@
     <string name="addparkingTown">Town</string>
     <string name="addparkingAddress">Address</string>
     <string name="addparkingHeader">Add your parking lot</string>
+    <string name="my_account">My account</string>
 
 </resources>

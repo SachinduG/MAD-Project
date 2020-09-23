@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class Main extends AppCompatActivity {
 
-    Button btnLogout;
+    Button btnLogout,account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +25,15 @@ public class Main extends AppCompatActivity {
                 finish();
             }
         });
+
+        account=findViewById(R.id.button8);
+        account.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),AccountControl.class));
+                finish();
+            }
+        });
+
     }
 }
