@@ -39,8 +39,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    public Boolean update(String name, String email, String mobile, String nic, String address, String password){
+    public void update(String name, String email, String mobile, String nic, String address,String password){
         SQLiteDatabase db = this.getWritableDatabase();
+
         ContentValues contentValues = new ContentValues();
         contentValues.put("name",name);
         contentValues.put("email",email);
@@ -48,17 +49,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("nic",nic);
         contentValues.put("address",address);
         contentValues.put("password",password);
-        Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{name});
-        if (cursor.getCount() > 0) {
-            long result = db.update("User", contentValues, "email=?", new String[]{name});
-            if (result == -1) {
-                return false;
-            } else {
-                return true;
-            }
-        } else {
-            return false;
-        }}
+
+        db.update("User", contentValues, "email = ?", new String[] {email});
+        db.close();
+    }
+
+       
 
     public Boolean delete (String name)
     {
