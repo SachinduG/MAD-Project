@@ -37,8 +37,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String MobilePattern = "[0-9]{10}";
-                String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                //String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 String FullName = fName.getText().toString().trim();
                 String Email = fEmail.getText().toString().trim();
                 String Nic = fNic.getText().toString().trim();
@@ -80,11 +79,11 @@ public class SignUp extends AppCompatActivity {
                 }else if(Nic.length() < 10) {
                     fNic.setError("NIC Number must be => 10 characters!");
 
-                }else if(Email.matches(EmailPattern)){
-                    fEmail.setError("Invalid Email Address!");
+                //}else if(fEmail.getText().toString().trim().matches(emailPattern)){
+                 //   fEmail.setError("Invalid Email Address!");
 
-                }else if(Mobile.matches(MobilePattern)){
-                    fMobile.setError("Invalid Mobile Number!");
+             //   }else if(!fMobile.getText().toString().matches("[a-zA-Z]+")){
+             //       fMobile.setError("Invalid Mobile Number!");
 
                 }else {
                     Boolean Checkemail = db.chkemail(fEmail.getText().toString());
@@ -100,7 +99,7 @@ public class SignUp extends AppCompatActivity {
                             clearControls();
 
                         }else{
-                            Toast.makeText(getApplicationContext(), "Registeration Unsuccessfull", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
                         }
 
                     }else{

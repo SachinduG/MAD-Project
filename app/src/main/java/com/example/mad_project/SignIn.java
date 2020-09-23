@@ -33,7 +33,6 @@ public class SignIn extends AppCompatActivity {
             public void onClick(View view) {
                 String Email = etEmail.getText().toString().trim();
                 String Password = etPassword.getText().toString().trim();
-                String EmailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Boolean CheckUser = db.emailpassword(Email, Password);
 
@@ -49,8 +48,8 @@ public class SignIn extends AppCompatActivity {
                 }else if(Password.isEmpty()) {
                     etPassword.setError("Enter your Password");
 
-                }else if(Email.matches(EmailPattern)){
-                    etEmail.setError("Invalid Email Address!");
+                //}else if(etEmail.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")){
+                //    etEmail.setError("Invalid Email Address!");
 
                 }else{
                     Toast.makeText(getApplicationContext(), "Wrong Email Address or Password",Toast.LENGTH_SHORT).show();
