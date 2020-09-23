@@ -14,8 +14,12 @@
 
         <activity android:name=".Addparking"></activity>
         <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2"></activity>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 176c3ad9b757fb482c39c168529acd0db4423946
         <activity android:name=".ForgotPassword" ></activity>
-        <activity android:name=".Changepassword" ></activity>
+      
         <activity android:name=".history" ></activity>
         <activity android:name=".EditAccount"></activity>
         <activity android:name=".AccountControl" ></activity>
@@ -24,6 +28,14 @@
         <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" ></activity>
         <activity android:name=".BookingHome"  android:theme="@style/AppTheme2"></activity>
         <activity android:name=".SignUp"></activity>
+<<<<<<< HEAD
+=======
+
+
+        <activity android:name=".ForgotPassword" />
+
+        
+>>>>>>> 176c3ad9b757fb482c39c168529acd0db4423946
         <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,6 +45,21 @@
 
         <activity android:name=".Main" ></activity>
         <activity android:name=".MapNavigate" ></activity>
+<<<<<<< HEAD
+=======
+
+
+
+       
+
+
+
+
+
+
+
+
+>>>>>>> 176c3ad9b757fb482c39c168529acd0db4423946
 
         <meta-data
             android:name="preloaded_fonts"
