@@ -2,6 +2,8 @@ package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,9 +12,11 @@ import android.widget.Toast;
 
 public class EditAccount extends AppCompatActivity {
 
-    EditText fName, fEmail, fMobile, fAddress, fNic;
-    Button Update,Cancel;
+    EditText fName, fEmail, fMobile, fAddress, fNic, fPassword,fConfirmPassword;
+    Button Update, Cancel;
     DatabaseHelper db;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,23 +29,70 @@ public class EditAccount extends AppCompatActivity {
         fMobile = findViewById(R.id.mobile);
         fAddress = findViewById(R.id.address);
         fNic = findViewById(R.id.nic);
+        fPassword = findViewById(R.id.password);
         Update = findViewById(R.id.Update);
-        Cancel = findViewById(R.id.cancel);*/
 
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (fName.getText().toString().equals("") || fEmail.getText().toString().equals("") || fNic.getText().toString().equals("") || fMobile.getText().toString().equals("") || fAddress.getText().toString().equals("")) {
-                    Toast.makeText(getApplicationContext(), "All Fields must be filled!", Toast.LENGTH_LONG).show();
-                } else if (fMobile.getText().toString().length() < 10) {
-                    Toast.makeText(getApplicationContext(), "Mobile number must be => 10 characters!", Toast.LENGTH_LONG).show();
-                } else {
-                    Boolean chkemail = db.chkemail(fEmail.getText().toString());
-                    if (chkemail = true) {
 
-                    }
+                if (fName.getText().toString().equals("")) {
+                    fName.setError("Enter the Name");
+
+                } else if (fEmail.getText().toString().equals("")) {
+                    fEmail.setError("Enter the Email Address");
+
+                } else if (fNic.getText().toString().equals("")) {
+                    fNic.setError("Enter the NIC Number");
+
+                } else if (fMobile.getText().toString().equals("")) {
+                    fMobile.setError("Enter the Mobile Number");
+
+                } else if (fAddress.getText().toString().equals("")) {
+                    fAddress.setError("Enter the Address");
+
+                } else if (fPassword.getText().toString().equals("")) {
+                    fPassword.setError("Enter the Password");
+
+
+                } else if (fPassword.getText().toString().length() < 6) {
+                    fPassword.setError("Password must be => 6 characters!");
+
+                } else if (fMobile.getText().toString().length() < 10) {
+                    fMobile.setError("Mobile Number must be => 10 characters!");
+
+                } else {
+                    db.update(fName.getText().toString(), fEmail.getText().toString(), fNic.getText().toString(),fMobile.getText().toString(),fAddress.getText().toString(),fPassword.getText().toString());
+
+                    Toast.makeText(EditAccount.this, "Entry Updated", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
     }
 }
+
+
+       /* btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDatabaseHelper.deleteName(selectedID,selectedName);
+                editable_item.setText("");
+                toastMessage("removed from database");
+            }
+        });
+
+             
+                    }
+                }
+            }
+        });
+    }
+
+    /**
+     * customizable toast
+     * @param message
+     */
+   /* private void toastMessage(String message){
+        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
+    }*/
