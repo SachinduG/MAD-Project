@@ -36,9 +36,8 @@ public class ForgotPassword extends AppCompatActivity {
 
                 if (CheckUser.equals(false)) {
                     Email.setError("Email Address doesn't exist");
-
-               // }else if(Email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
-               //     Email.setError("Email Address is a not valid one");
+                }else if(Email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
+                   Email.setError("Email Address is a not valid one");
 
                 }else if(EmailAddress.isEmpty()){
                     Email.setError("Enter your Email Address");

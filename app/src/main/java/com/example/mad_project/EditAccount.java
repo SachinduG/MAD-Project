@@ -16,16 +16,14 @@ public class EditAccount extends AppCompatActivity {
     Button Update, Cancel;
     DatabaseHelper db;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_account);
 
-        /*db = new DatabaseHelper(this);
+        db = new DatabaseHelper(this);
         fName = findViewById(R.id.name);
-        fEmail = findViewById(R.id.Email);
+        fEmail = findViewById(R.id.email);
         fMobile = findViewById(R.id.mobile);
         fAddress = findViewById(R.id.address);
         fNic = findViewById(R.id.nic);

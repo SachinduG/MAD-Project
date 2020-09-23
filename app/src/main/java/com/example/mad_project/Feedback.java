@@ -39,8 +39,8 @@ public class Feedback extends AppCompatActivity {
                 }else if(Email.isEmpty()) {
                     email.setError("Fill your Email Address");
 
-              //  }else if(email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")){
-               //     email.setError("Enter valid Email Address");
+                }else if(email.getText().toString().matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")){
+                    email.setError("Enter valid Email Address");
 
                 }else if(Message.isEmpty()){
                     message.setError("Fill your Message");
