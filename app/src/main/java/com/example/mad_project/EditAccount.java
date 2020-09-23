@@ -23,21 +23,19 @@ public class EditAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_account);
 
-        db = new DatabaseHelper(this);
+        /*db = new DatabaseHelper(this);
         fName = findViewById(R.id.name);
-        fEmail = findViewById(R.id.email);
+        fEmail = findViewById(R.id.Email);
         fMobile = findViewById(R.id.mobile);
         fAddress = findViewById(R.id.address);
         fNic = findViewById(R.id.nic);
         fPassword = findViewById(R.id.password);
         Update = findViewById(R.id.Update);
 
-
-
-
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 if (fName.getText().toString().equals("")) {
                     fName.setError("Enter the Name");
 
@@ -84,6 +82,11 @@ public class EditAccount extends AppCompatActivity {
             }
         });
 
+             
+                    }
+                }
+            }
+        });
     }
 
     /**

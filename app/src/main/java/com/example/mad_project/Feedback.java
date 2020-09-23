@@ -32,20 +32,23 @@ public class Feedback extends AppCompatActivity {
         btnsend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                final String FullName = name.getText().toString().trim();
+                final String Email = email.getText().toString().trim();
+                final String Message = message.getText().toString().trim();
 
-                if (name.getText().toString().equals("")){
+                if (FullName.isEmpty()){
                     name.setError("Fill your Name");
 
-                }else if(email.getText().toString().equals("")){
+                }else if(Email.isEmpty()){
                     email.setError("Fill your Email Address");
 
-                }else if(message.getText().toString().equals("")){
+                }else if(Message.isEmpty()){
                     message.setError("Fill your Message");
 
                 }else {
-                    Boolean insert = db.insert(name.getText().toString(), email.getText().toString(), message.getText().toString());
+                    Boolean insert = db.insert(FullName, Email, Message);
 
-                    if (insert == true) {
+                    if (insert.equals(true)) {
                         Toast.makeText(getApplicationContext(), "Sent Feedback Successfully", Toast.LENGTH_SHORT).show();
                         btnsend.setEnabled(true);
                         btnview.setEnabled(true);
@@ -61,7 +64,7 @@ public class Feedback extends AppCompatActivity {
 
                         new AlertDialog.Builder(Feedback.this)
                                 .setTitle("Your Feedback:")
-                                .setMessage("Full Name :- " + name.getText().toString() + "\n\nEmail Address :- " + email.getText().toString() + "\n\nMessage :- " + message.getText().toString())
+                                .setMessage("Full Name :- " + FullName + "\n\nEmail Address :- " + Email + "\n\nMessage :- " + Message)
                                 .show();
                     }
                 });

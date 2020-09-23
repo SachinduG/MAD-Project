@@ -49,15 +49,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("nic",nic);
         contentValues.put("address",address);
         contentValues.put("password",password);
+
         db.update("User", contentValues, "email = ?", new String[] {email});
         db.close();
     }
+
+       
+
     public Boolean delete (String name)
     {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from User where name = ?", new String[]{name});
+        Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{name});
         if (cursor.getCount() > 0) {
-            long result = db.delete("User", "name=?", new String[]{name});
+            long result = db.delete("User", "email=?", new String[]{name});
             if (result == -1) {
                 return false;
             } else {
@@ -76,8 +80,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
 
     }
-
-
 
     public Boolean insert(String name, String email, String message){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -101,7 +103,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-
     public Boolean emailpassword(String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from User where email=? and password=?",new String[] {email,password});
@@ -109,5 +110,38 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         else
             return false;
+    }
+
+    public void updatePassword(String email, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("password", password);
+        db.update("User", values, "email = ?",new String[] { email });
+        db.close();
+    }
+
+    public Boolean checkUser(String email){
+        String[] columns = {
+                "email"
+        };
+        SQLiteDatabase db = this.getWritableDatabase();
+        String selection = "email = ?";
+        String[] selectionArgs = { email };
+
+        Cursor cursor = db.query("User",
+                columns,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null);
+        int cursorCount = cursor.getCount();
+        cursor.close();
+        db.close();
+
+        if (cursorCount > 0){
+            return true;
+        }
+        return false;
     }
 }
