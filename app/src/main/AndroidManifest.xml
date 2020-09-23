@@ -13,15 +13,15 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".Addparking"/>
-        <activity android:name=".BOOKPayment"></activity>
+        <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2"></activity>
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
         <activity android:name=".AccountControl" />
         <activity android:name=".Feedback" />
         <activity android:name=".MapNavigate"/>
         <activity android:name=".EditBookingProfile" />
-        <activity android:name=".BookingProfileManagement" />
-        <activity android:name=".BookingHome" >
+        <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" />
+        <activity android:name=".BookingHome"  android:theme="@style/AppTheme2">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

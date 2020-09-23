@@ -49,7 +49,8 @@
     <string name="town">Town</string>
     <string name="addres">Addres</string>
     <string name="address">Address</string>
-
+    <string name="hours">enter Hours</string>
+    <string name="chargers">chargers</string>
 
 
 </resources>
