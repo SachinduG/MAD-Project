@@ -23,6 +23,10 @@ public class Main extends AppCompatActivity {
 
         btnLogout = findViewById(R.id.btnLogout);
 
+       //account = findViewById(R.id.button8);
+
+
+
         Email = findViewById(R.id.tvEmailMain);
         sessionManager = new SessionManager(getApplicationContext());
 
@@ -60,12 +64,6 @@ public class Main extends AppCompatActivity {
                 }
             });
 
-            account.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    startActivity(new Intent(getApplicationContext(), AccountControl.class));
-                    finish();
-                }
-            });
+
         }
 }

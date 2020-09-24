@@ -65,6 +65,8 @@
     <string name="addparkingHeader">Add your parking lot</string>
     <string name="my_account">My account</string>
     <string name="hello">Hello</string>
+    <string name="addrate_per_hour_100_00_rs">Rate Per Hour : 100.00 Rs.</string>
+    <string name="addimagebtn">addimagebtn</string>
 
 
 
