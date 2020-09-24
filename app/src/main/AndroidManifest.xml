@@ -21,15 +21,16 @@
         <activity android:name=".Feedback" ></activity>
         <activity android:name=".EditBookingProfile" ></activity>
         <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" ></activity>
-        <activity android:name=".BookingHome"  android:theme="@style/AppTheme2"></activity>
-        <activity android:name=".SignUp"></activity>
-        <activity android:name=".SignIn">
+        <activity android:name=".BookingHome"  android:theme="@style/AppTheme2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".SignUp"></activity>
+        <activity android:name=".SignIn"/>
         <activity android:name=".Main" ></activity>
         <activity android:name=".MapNavigate" ></activity>
 

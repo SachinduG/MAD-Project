@@ -52,6 +52,7 @@
     <string name="addemail">Email</string>
     <string name="hours">enter Hours</string>
     <string name="chargers">chargers</string>
+    <string name="bookingprofileheader">Booking Profile</string>
     <string name="header4">Enter Your Email Address</string>
     <string name="btnEmail">Confirm</string>
     <string name="Forgotpassword">Forgot your password?</string>
@@ -64,6 +65,7 @@
     <string name="addparkingHeader">Add your parking lot</string>
     <string name="my_account">My account</string>
     <string name="hello">Hello</string>
+
 
 
 </resources>

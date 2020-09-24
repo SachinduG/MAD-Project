@@ -23,7 +23,7 @@ public class AccountControl extends AppCompatActivity {
     DatabaseHelper db;
     SessionManager sessionManager;
 
-    String Name = sessionManager.getName();
+
 
 
     @Override
