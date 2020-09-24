@@ -16,6 +16,8 @@ public class SignIn extends AppCompatActivity {
     TextView SignUp, Password;
     DatabaseHelper db;
 
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +30,8 @@ public class SignIn extends AppCompatActivity {
         SignUp = findViewById(R.id.tvSignUp);
         Password = findViewById(R.id.tvPassword);
 
+        sessionManager = new SessionManager(getApplicationContext());
+
         SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +42,8 @@ public class SignIn extends AppCompatActivity {
                 Boolean CheckUser = db.emailpassword(Email, Password);
 
                 if(CheckUser.equals(true)){
+                    sessionManager.setLogin(true);
+                    sessionManager.setEmail(Email);
                     Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), Main.class);
@@ -57,6 +63,10 @@ public class SignIn extends AppCompatActivity {
                 }
             }
         });
+
+        if(sessionManager.getLogin()){
+            startActivity(new Intent(getApplicationContext(),Main.class));
+        }
 
         SignUp.setOnClickListener(new View.OnClickListener(){
             @Override
