@@ -22,7 +22,11 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main1);
 
         btnLogout = findViewById(R.id.btnLogout);
+
        //account = findViewById(R.id.button8);
+
+
+
         Email = findViewById(R.id.tvEmailMain);
         sessionManager = new SessionManager(getApplicationContext());
 

@@ -52,6 +52,7 @@
     <string name="addemail">Email</string>
     <string name="hours">enter Hours</string>
     <string name="chargers">chargers</string>
+    <string name="bookingprofileheader">Booking Profile</string>
     <string name="header4">Enter Your Email Address</string>
     <string name="btnEmail">Confirm</string>
     <string name="Forgotpassword">Forgot your password?</string>
@@ -66,6 +67,7 @@
     <string name="hello">Hello</string>
     <string name="addrate_per_hour_100_00_rs">Rate Per Hour : 100.00 Rs.</string>
     <string name="addimagebtn">addimagebtn</string>
+
 
 
 </resources>
