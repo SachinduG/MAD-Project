@@ -36,7 +36,12 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
 
 
         btnLogout = findViewById(R.id.btnLogout);
-        //account = findViewById(R.id.button8);
+
+
+
+
+
+
         Email = findViewById(R.id.tvEmailMain);
         sessionManager = new SessionManager(getApplicationContext());
 
