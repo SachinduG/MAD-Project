@@ -28,7 +28,7 @@
         android:layout_height="26dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/customer_points"
-        android:textColor="#FFEB3B"
+        android:textColor="#F4F3EA"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/Points"
