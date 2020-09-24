@@ -13,12 +13,18 @@ import android.widget.ImageButton;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.jar.Attributes;
+
 import Database.BOOKUser;
 
 public class AccountControl extends AppCompatActivity {
     Button button;
     TextView fName;
     DatabaseHelper db;
+    SessionManager sessionManager;
+
+    String Name = sessionManager.getName();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,48 +33,38 @@ public class AccountControl extends AppCompatActivity {
         OnClickButtonLister();
         OnClickButtonLister1();
         fName = findViewById(R.id.CusName);
-    }
-
-    public void getname(View view) {
-
-        fName.setText(getString(0));
-        db.getname();
-
-
 
     }
 
+        public void OnClickButtonLister () {
+            button = (Button) findViewById(R.id.button1);
+            button.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
 
 
-    public void OnClickButtonLister(){
-        button = (Button) findViewById(R.id.button1);
-        button.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-
-                        Intent intent = new Intent(AccountControl.this, EditAccount.class);
-                        startActivity(intent);
+                            Intent intent = new Intent(AccountControl.this, EditAccount.class);
+                            startActivity(intent);
+                        }
                     }
-                }
 
-        );
-    }
-    public void OnClickButtonLister1(){
-        button = (Button)findViewById(R.id.button3);
-        button.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
+            );
+        }
+        public void OnClickButtonLister1 () {
+            button = (Button) findViewById(R.id.button3);
+            button.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
 
 
-                        Intent intent = new Intent(AccountControl.this, history.class);
-                        startActivity(intent);
+                            Intent intent = new Intent(AccountControl.this, history.class);
+                            startActivity(intent);
+                        }
                     }
-                }
-        );
+            );
+        }
+
+
     }
-
-
-}
