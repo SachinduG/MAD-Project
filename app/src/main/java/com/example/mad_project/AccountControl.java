@@ -11,9 +11,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class AccountControl extends AppCompatActivity {
     Button button;
+    TextView Cusname;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class AccountControl extends AppCompatActivity {
         OnClickButtonLister1();
 
     }
+
+
     public void OnClickButtonLister(){
         button = (Button) findViewById(R.id.button1);
         button.setOnClickListener(
@@ -53,5 +57,5 @@ public class AccountControl extends AppCompatActivity {
         );
     }
 
-    
+
 }

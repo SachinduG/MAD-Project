@@ -74,17 +74,16 @@ public class EditAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String Email = fEmail.getText().toString();
-                Boolean checkudeletedata = db.delete(Email);
-                if (checkudeletedata == true) {
+                 db.delete(Email);
+
                     Toast.makeText(EditAccount.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), SignIn.class);
                     startActivity(intent);
 
-                } else {
-                    Toast.makeText(EditAccount.this, "Entry Not Deleted", Toast.LENGTH_SHORT).show();
                 }
-            }
+
+
         });
     }
 }
