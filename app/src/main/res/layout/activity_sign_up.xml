@@ -12,7 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/aclonica"
         android:text="@string/topic"
@@ -21,7 +21,6 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -46,7 +45,7 @@
         android:id="@+id/btnSignUp"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_drawable_selector1"
         android:text="@string/btnSignUp"
         android:textSize="18sp"
@@ -54,11 +53,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
+        app:layout_constraintTop_toBottomOf="@+id/SignupPassword2"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/name"
+        android:id="@+id/SignupName"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -79,8 +78,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/nic"
-        android:layout_width="150dp"
+        android:id="@+id/SignupNic"
+        android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -91,13 +90,13 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mobile"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SignupMobile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/mobile"
+        android:id="@+id/SignupMobile"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -114,11 +113,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/SignupName"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/SignupPassword"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -135,12 +134,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/address"
+        app:layout_constraintTop_toBottomOf="@+id/SignupAddress"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/password2"
-        android:layout_width="160dp"
+        android:id="@+id/SignupPassword2"
+        android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -151,14 +150,14 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBaseline_toBaselineOf="@+id/password"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SignupPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/email"
-        android:layout_width="150dp"
+        android:id="@+id/SignupEmail"
+        android:layout_width="170dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -169,13 +168,13 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBaseline_toBaselineOf="@+id/name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/SignupName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/SignupAddress"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
@@ -192,7 +191,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nic"
+        app:layout_constraintTop_toBottomOf="@+id/SignupNic"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView

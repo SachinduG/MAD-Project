@@ -32,10 +32,10 @@ public class MapNavigate extends AppCompatActivity {
                 String sSource = Source.getText().toString().trim();
                 String sDestination = Destination.getText().toString().trim();
 
-                if (sSource.equals("")){
+                if (sSource.isEmpty()){
                     Source.setError("Enter your location");
 
-                }else if(sDestination.equals("")) {
+                }else if(sDestination.isEmpty()) {
                     Destination.setError("Enter your destination");
 
                 }else if(sSource.equals(sDestination)){

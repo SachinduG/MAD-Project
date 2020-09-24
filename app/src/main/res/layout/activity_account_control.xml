@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/a6"
+    android:background="@drawable/car1"
     tools:context=".AccountControl">
 
     <TextView
@@ -17,9 +17,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <TextView
         android:id="@+id/CusPoints"
@@ -49,6 +50,7 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="406dp"
         android:layout_height="535dp"
         android:layout_marginTop="38dp"
@@ -61,55 +63,61 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#03A9F4"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_drawable_selector2"
             android:fontFamily="@font/aclonica"
-            android:padding="30dp"
+            android:padding="20dp"
             android:text="@string/edit_your_account" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#03A9F4"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_drawable_selector2"
             android:fontFamily="@font/aclonica"
-            android:padding="30dp"
+            android:padding="20dp"
             android:text="@string/make_your_own_parking" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#03A9F4"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_drawable_selector2"
             android:fontFamily="@font/aclonica"
-            android:padding="30dp"
+            android:padding="20dp"
             android:text="@string/parking_history"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#03A9F4"
-            android:fontFamily="@font/aclonica"
-            android:padding="30dp"
-            android:text="@string/change_password" />
-
-        <Button
             android:id="@+id/button5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:background="#03A9F4"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_drawable_selector2"
             android:fontFamily="@font/aclonica"
-            android:padding="30dp"
+            android:padding="20dp"
             android:text="@string/logout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="70dp"
+        android:layout_height="51dp"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/hello"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.301" />
 </androidx.constraintlayout.widget.ConstraintLayout>
