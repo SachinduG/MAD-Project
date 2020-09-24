@@ -51,6 +51,7 @@
     <string name="address">Address</string>
     <string name="hours">enter Hours</string>
     <string name="chargers">chargers</string>
+    <string name="bookingprofileheader">Booking Profile</string>
 
 
 </resources>

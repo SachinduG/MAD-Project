@@ -13,6 +13,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
+        android:layout_marginTop="70dp"
         android:layout_marginBottom="500dp"
         android:hint="@string/BOOkname"
         android:padding="30dp"
@@ -21,15 +22,15 @@
         app:helperText=" Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookName"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
-            android:layout_height="66dp" />/>
+            android:layout_height="66dp" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -40,6 +41,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
+        android:layout_marginTop="199dp"
         android:layout_marginBottom="372dp"
         android:hint="@string/BOOKemail"
         android:padding="30dp"
@@ -48,7 +50,9 @@
         app:helperText=" email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookEmail"
@@ -64,6 +68,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
+        android:layout_marginTop="323dp"
         android:layout_marginBottom="248dp"
         android:hint="@string/BOOKNIC"
         android:padding="30dp"
@@ -72,7 +77,9 @@
         app:helperText=" NIC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookNIC"
@@ -89,6 +96,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
+        android:layout_marginTop="447dp"
         android:layout_marginBottom="124dp"
         android:hint="@string/BOOKmobile"
         android:padding="30dp"
@@ -97,8 +105,9 @@
         app:helperText=" mobile"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookMobile"
@@ -115,6 +124,7 @@
         android:layout_width="111dp"
         android:layout_height="48dp"
         android:layout_marginStart="120dp"
+        android:layout_marginTop="643dp"
         android:layout_marginEnd="171dp"
         android:layout_marginBottom="40dp"
         android:text="Submit"
@@ -122,7 +132,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.27999997" />
 
     <TextView
         android:id="@+id/B"

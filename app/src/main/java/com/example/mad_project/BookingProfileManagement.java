@@ -36,25 +36,53 @@ public class BookingProfileManagement extends AppCompatActivity {
         search = findViewById(R.id.buttonsearchj);
         Delete = findViewById(R.id.delete);
 
+        Intent intent = getIntent();
+
+        String num1 = intent.getStringExtra("name");
+        String num2 = intent.getStringExtra("email");
+        String num3 = intent.getStringExtra("nic");
+        String num4 = intent.getStringExtra("mobile");
+
+        name.setText(num1);
+        email.setText(num2);
+        nic.setText(num3);
+        mobile.setText(num4);
+
         bookUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                DBHandler dbHandler = new DBHandler (getApplicationContext());
-
-                Boolean satus = dbHandler.UpdateBookDetails(name.getText().toString(),email.getText().toString(),nic.getText().toString(),mobile.getText().toString());
-
-                if(satus)
-                {
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                String mobilePattern = "[a-zA-Z]+";
 
 
-                    Toast.makeText(BookingProfileManagement.this, " upated sucessfully", Toast.LENGTH_SHORT).show();
-                }
+                if (!email.getText().toString().trim().matches(emailPattern)) {
 
-                else {
+                    email.setError("invalid email address");
+                } else if (mobile.getText().toString().trim().matches(mobilePattern)) {
 
-                    Toast.makeText(BookingProfileManagement.this, "not updated", Toast.LENGTH_SHORT).show();
+                    mobile.setError("invalid mobile");
+                } else if (mobile.getText().toString().trim().matches(mobilePattern)) {
 
+                    mobile.setError("invalid mobile");
+                } else if (mobile.length() < 10) {
+                    mobile.setError("mobile must be 10 number ");
+                } else {
+
+                    DBHandler dbHandler = new DBHandler(getApplicationContext());
+
+
+                    Boolean satus = dbHandler.UpdateBookDetails(name.getText().toString(), email.getText().toString(), nic.getText().toString(), mobile.getText().toString());
+
+                    if (satus) {
+
+
+                        Toast.makeText(BookingProfileManagement.this, " upated sucessfully", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        Toast.makeText(BookingProfileManagement.this, "not updated", Toast.LENGTH_SHORT).show();
+
+                    }
                 }
             }
         });
