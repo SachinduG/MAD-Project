@@ -32,6 +32,7 @@ public class AccountControl extends AppCompatActivity {
         setContentView(R.layout.activity_account_control);
         OnClickButtonLister();
         OnClickButtonLister1();
+        OnClickButtonLister2();
         fName = findViewById(R.id.CusName);
 
     }
@@ -65,6 +66,19 @@ public class AccountControl extends AppCompatActivity {
                     }
             );
         }
+    public void OnClickButtonLister2 () {
+        button = (Button) findViewById(R.id.button5);
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
 
+
+                        Intent intent = new Intent(AccountControl.this, Feedback.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
 
     }

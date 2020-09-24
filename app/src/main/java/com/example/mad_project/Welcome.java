@@ -3,8 +3,6 @@ package com.example.mad_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
-import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
