@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/car1"
     tools:context=".Addparking">
 
     <TextView
@@ -30,6 +31,7 @@
         android:layout_marginTop="88dp"
         android:layout_marginEnd="303dp"
         android:layout_marginBottom="535dp"
+        android:contentDescription="@string/addimagebtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -48,6 +50,7 @@
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="568dp"
         android:layout_toEndOf="@+id/imageView"
+        android:background="@drawable/btn_drawable_selector1"
         android:text="@string/CHOOSE_IMAGE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,10 +73,10 @@
         android:textColorHint="#120101"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/townid"
@@ -109,20 +112,50 @@
         app:layout_constraintTop_toBottomOf="@+id/townid"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/txtaddid"
+        android:layout_width="328dp"
+        android:layout_height="46dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:text="@string/addrate_per_hour_100_00_rs"
+        android:textAllCaps="false"
+        android:textColor="#0B0000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tpoic1"
+        app:layout_constraintVertical_bias="0.621" />
+
     <EditText
-        android:id="@+id/rateid"
-        android:layout_width="339dp"
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="335dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="255dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="501dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="180dp"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:ems="10"
-        android:hint="@string/rate_per_hour"
-        android:inputType="textPersonName"
-        android:textColorHint="#100000"
+        android:inputType="textMultiLine|text"
+        android:text="Discription"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/addid"
-        app:layout_constraintTop_toBottomOf="@+id/addid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="268dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="388dp"
+        android:background="@drawable/btn_drawable_selector3"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emid"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
