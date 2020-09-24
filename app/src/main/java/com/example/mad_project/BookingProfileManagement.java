@@ -49,6 +49,9 @@ public class BookingProfileManagement extends AppCompatActivity {
         mobile.setText(num4);
 
         bookUpdate.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View view) {
 
@@ -69,11 +72,16 @@ public class BookingProfileManagement extends AppCompatActivity {
                     mobile.setError("mobile must be 10 number ");
                 } else {
 
+
+
                     DBHandler dbHandler = new DBHandler(getApplicationContext());
 
 
                     Boolean satus = dbHandler.UpdateBookDetails(name.getText().toString(), email.getText().toString(), nic.getText().toString(), mobile.getText().toString());
 
+                    Intent intent= new Intent(getApplicationContext(),BOOKPayment.class);
+                    startActivity(intent);
+                    
                     if (satus) {
 
 
@@ -81,6 +89,8 @@ public class BookingProfileManagement extends AppCompatActivity {
                     } else {
 
                         Toast.makeText(BookingProfileManagement.this, "not updated", Toast.LENGTH_SHORT).show();
+
+
 
                     }
                 }
