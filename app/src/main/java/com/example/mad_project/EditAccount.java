@@ -64,6 +64,8 @@ public class EditAccount extends AppCompatActivity {
                     db.update(fName.getText().toString(), fEmail.getText().toString(), fNic.getText().toString(), fMobile.getText().toString(), fAddress.getText().toString(), fPassword.getText().toString());
 
                     Toast.makeText(EditAccount.this, "Entry Updated", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), Main.class);
+                    startActivity(intent);
 
                 }
             }
