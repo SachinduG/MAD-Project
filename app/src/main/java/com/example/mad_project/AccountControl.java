@@ -13,9 +13,12 @@ import android.widget.ImageButton;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import Database.BOOKUser;
+
 public class AccountControl extends AppCompatActivity {
     Button button;
-    TextView Cusname;
+    TextView fName;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +26,18 @@ public class AccountControl extends AppCompatActivity {
         setContentView(R.layout.activity_account_control);
         OnClickButtonLister();
         OnClickButtonLister1();
+        fName = findViewById(R.id.CusName);
+    }
+
+    public void getname(View view) {
+
+        fName.setText(getString(0));
+        db.getname();
+
+
 
     }
+
 
 
     public void OnClickButtonLister(){
