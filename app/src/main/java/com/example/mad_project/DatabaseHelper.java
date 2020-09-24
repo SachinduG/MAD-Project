@@ -73,6 +73,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
 
     }
+    public Cursor getname ()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select name  from User", null);
+        return cursor;
+
+    }
 
     public Boolean insert(String name, String email, String message){
         SQLiteDatabase db = this.getWritableDatabase();
