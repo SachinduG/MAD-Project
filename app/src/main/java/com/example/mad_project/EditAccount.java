@@ -9,12 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.content.DialogInterface;
 
 public class EditAccount extends AppCompatActivity {
 
     EditText fName, fEmail, fMobile, fAddress, fNic, fPassword, fConfirmPassword;
     Button Update, delete;
     DatabaseHelper db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +82,7 @@ public class EditAccount extends AppCompatActivity {
 
                     Toast.makeText(EditAccount.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(getApplicationContext(), SignIn.class);
+                    Intent intent = new Intent(getApplicationContext(), SignUp.class);
                     startActivity(intent);
 
                 }
