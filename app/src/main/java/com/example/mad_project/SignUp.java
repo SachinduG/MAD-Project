@@ -37,7 +37,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                boolean isValid = Utils.checkEmailForValidity(fEmail.getText().toString());
                 String mobilePattern = "[a-zA-Z]+";
                 String FullName = fName.getText().toString().trim();
                 String Email = fEmail.getText().toString().trim();
@@ -80,7 +80,7 @@ public class SignUp extends AppCompatActivity {
                 }else if(Nic.length() < 10) {
                     fNic.setError("NIC Number must be => 10 characters!");
 
-                }else if(!fEmail.getText().toString().trim().matches(emailPattern)){
+                }else if(!isValid){
                     fEmail.setError("Invalid Email Address!");
 
                 }else if(fMobile.getText().toString().matches(mobilePattern)){

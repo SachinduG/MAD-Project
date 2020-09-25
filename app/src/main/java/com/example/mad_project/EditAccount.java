@@ -1,5 +1,6 @@
 package com.example.mad_project;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -32,6 +33,7 @@ public class EditAccount extends AppCompatActivity {
         fPassword = findViewById(R.id.password);
         Update = findViewById(R.id.Update);
         delete = findViewById(R.id.button7);
+
 
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,63 +75,40 @@ public class EditAccount extends AppCompatActivity {
             }
         });
 
-
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String Email = fEmail.getText().toString();
-                 db.delete(Email);
 
-                    Toast.makeText(EditAccount.this, "Entry Deleted", Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setTitle("Delete Your Account");
+                builder.setMessage("Are you sure to delete?");
+                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
 
-                    Intent intent = new Intent(getApplicationContext(), SignUp.class);
-                    startActivity(intent);
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        String Email = fEmail.getText().toString();
+                        db.delete(Email);
 
-                }
-
-
-        });
-    }
-}
-
-
-
-
-    /*public void onClick(View view) {
-        Cursor res = db.get();
-        if(res.getCount()==0){
-            Toast.makeText(EditAccount.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
-            return;
-        }
-        StringBuffer buffer = new StringBuffer();
-        while(res.moveToNext()){
-            buffer.append("Name :"+res.getString(0)+"\n");
-            buffer.append("Contact :"+res.getString(1)+"\n");
-            buffer.append("Date of Birth :"+res.getString(2)+"\n\n");
-        }
-}
-
-
-       /* btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mDatabaseHelper.deleteName(selectedID,selectedName);
-                editable_item.setText("");
-                toastMessage("removed from database");
-            }
-        });
-
-             
+                        Toast.makeText(EditAccount.this, "Account Deleted", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(getApplicationContext(), SignUp.class));
+                        finish();
                     }
-                }
+                });
+
+                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
             }
         });
     }
+}
 
-    /**
-     * customizable toast
-     * @param message
-     */
-   /* private void toastMessage(String message){
-        Toast.makeText(this,message, Toast.LENGTH_SHORT).show();
-    }*/
+
+
+
