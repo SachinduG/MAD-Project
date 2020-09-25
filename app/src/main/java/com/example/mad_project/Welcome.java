@@ -3,8 +3,6 @@ package com.example.mad_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.Image;
-import android.media.tv.TvContract;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -39,7 +37,7 @@ public class Welcome extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Welcome.this, SignIn.class);
+                Intent intent = new Intent(Welcome.this, Welcome1.class);
                 startActivity(intent);
                 finish();
             }

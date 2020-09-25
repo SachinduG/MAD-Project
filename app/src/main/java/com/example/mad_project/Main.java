@@ -86,7 +86,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
                     break;
 
                 case R.id.bookingcardid:
-                    i = new Intent(this, BookingHome.class);
+                    i = new Intent(this, SearchPark.class);
                     startActivity(i);
                     break;
 
