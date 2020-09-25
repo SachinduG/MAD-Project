@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/btnSignIn"
         android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/btn_drawable_selector2"
         android:text="@string/btnSignIn"
@@ -18,7 +18,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword"
         app:layout_constraintVertical_bias="0.0" />

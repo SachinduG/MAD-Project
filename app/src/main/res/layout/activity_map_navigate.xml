@@ -29,7 +29,7 @@
     <Button
         android:id="@+id/btnDisplay"
         android:layout_width="225dp"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/btn_drawable_selector3"
         android:text="@string/btnDisplay"

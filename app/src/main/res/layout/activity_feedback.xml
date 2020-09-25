@@ -28,39 +28,39 @@
     <Button
         android:id="@+id/btnFD"
         android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_drawable_selector2"
         android:text="@string/btnFB"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FD_message"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/FD_message" />
 
     <Button
         android:id="@+id/btnViewFeedback"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="17dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/btn_drawable_selector1"
         android:enabled="false"
         android:text="@string/btnViewFB"
         android:textColor="@color/common_google_signin_btn_text_light_pressed"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnFD"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FD_message" />
+        app:layout_constraintTop_toBottomOf="@+id/btnFD" />
 
     <EditText
         android:id="@+id/FD_name"
-        android:layout_width="0dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/FBName"
@@ -68,20 +68,16 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.257"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <EditText
         android:id="@+id/FD_email"
-        android:layout_width="347dp"
+        android:layout_width="360dp"
         android:layout_height="50dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/FBEmail"
@@ -89,16 +85,15 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBottom_toTopOf="@+id/FD_message"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FD_name"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="@+id/FD_name"
+        app:layout_constraintTop_toBottomOf="@+id/FD_name" />
 
     <EditText
         android:id="@+id/FD_message"
-        android:layout_width="347dp"
+        android:layout_width="360dp"
         android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:hint="@string/FBMessage"
@@ -106,21 +101,20 @@
         android:textAlignment="center"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textColorHint="#DC575656"
-        app:layout_constraintBottom_toTopOf="@+id/btnFD"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FD_email"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="@+id/FD_email"
+        app:layout_constraintTop_toBottomOf="@+id/FD_email" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/cutive"
         android:text="@string/connect_with_us_our_team_is_here_to_help_you"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/FD_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />

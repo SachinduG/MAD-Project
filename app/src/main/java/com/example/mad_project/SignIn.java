@@ -45,9 +45,10 @@ public class SignIn extends AppCompatActivity {
                     sessionManager.setLogin(true);
                     sessionManager.setEmail(Email);
                     Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_SHORT).show();
-
+                    clearControls();
                     Intent intent = new Intent(getApplicationContext(), Main.class);
                     startActivity(intent);
+
 
                 }else if(Email.isEmpty()){
                     etEmail.setError("Enter your Email Address");
@@ -83,5 +84,10 @@ public class SignIn extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), ForgotPassword.class));
             }
         });
+
+    }
+    private void clearControls(){
+        etEmail.setText("");
+        etPassword.setText("");
     }
 }

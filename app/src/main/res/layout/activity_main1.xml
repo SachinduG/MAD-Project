@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
+    android:background="@drawable/bg3"
     tools:context=".Main">
 
     <Button
@@ -40,13 +40,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="83dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="600dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="598dp"
         android:fontFamily="@font/aclonica"
         android:text="APS  Parking App"
         android:textColor="#130000"
@@ -54,12 +55,14 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="426dp"
+        android:layout_height="427dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="6dp"
+        android:layout_marginTop="182dp"
         android:layout_marginEnd="218dp"
         android:layout_marginRight="218dp"
         android:layout_marginBottom="116dp"
@@ -67,8 +70,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/usercardid"
-            android:layout_width="155dp"
-            android:layout_height="160dp"
+            android:layout_width="159dp"
+            android:layout_height="162dp"
             android:layout_margin="20dp"
             android:clickable="true"
             android:padding="20dp">
@@ -96,7 +99,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/addparkingcardview"
             android:layout_width="158dp"
-            android:layout_height="169dp"
+            android:layout_height="171dp"
             android:layout_margin="20dp"
             android:clickable="true">
 
@@ -125,9 +128,11 @@
     <LinearLayout
         android:layout_width="204dp"
         android:layout_height="438dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="182dp"
         android:layout_marginEnd="9dp"
         android:layout_marginRight="9dp"
         android:layout_marginBottom="111dp"
@@ -136,8 +141,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/bookingcardid"
-            android:layout_width="155dp"
-            android:layout_height="160dp"
+            android:layout_width="163dp"
+            android:layout_height="161dp"
             android:layout_margin="20dp"
             android:clickable="true">
 
@@ -162,8 +167,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/mapcardid"
-            android:layout_width="155dp"
-            android:layout_height="160dp"
+            android:layout_width="162dp"
+            android:layout_height="170dp"
             android:layout_margin="20dp"
             android:clickable="true">
 
@@ -208,10 +213,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="1dp"
         app:srcCompat="@drawable/hfotter" />
 
 </RelativeLayout>
