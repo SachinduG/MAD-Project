@@ -31,6 +31,7 @@ public class EditAccount extends AppCompatActivity {
         fAddress = findViewById(R.id.address);
         fNic = findViewById(R.id.nic);
         fPassword = findViewById(R.id.password);
+        fConfirmPassword = findViewById(R.id.password2);
         Update = findViewById(R.id.Update);
         delete = findViewById(R.id.button7);
 
@@ -38,6 +39,9 @@ public class EditAccount extends AppCompatActivity {
         Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                String mobilePattern = "[a-zA-Z]+";
 
                 if (fName.getText().toString().equals("")) {
                     fName.setError("Enter the Name");
@@ -60,9 +64,22 @@ public class EditAccount extends AppCompatActivity {
 
                 } else if (fPassword.getText().toString().length() < 6) {
                     fPassword.setError("Password must be => 6 characters!");
+                } else if (fConfirmPassword.getText().toString().equals("")) {
+                    fConfirmPassword.setError("Enter the confirm Password");
+                } else if (fConfirmPassword.getText().toString().length() < 6) {
+                    fPassword.setError("Password must be => 6 characters!");
+
+               // }else if(!fPassword.contentEquals(fConfirmPassword)) {
+                 //   fPassword.setError("Passwords do not match");
 
                 } else if (fMobile.getText().toString().length() < 10) {
                     fMobile.setError("Mobile Number must be => 10 characters!");
+
+                }else if(!fEmail.getText().toString().trim().matches(emailPattern)){
+                    fEmail.setError("Invalid Email Address!");
+
+                }else if(fMobile.getText().toString().matches(mobilePattern)){
+                    fMobile.setError("Invalid Mobile Number!");
 
                 } else {
                     db.update(fName.getText().toString(), fEmail.getText().toString(), fNic.getText().toString(), fMobile.getText().toString(), fAddress.getText().toString(), fPassword.getText().toString());
