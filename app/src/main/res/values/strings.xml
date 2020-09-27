@@ -67,7 +67,11 @@
     <string name="hello">Hello</string>
     <string name="addrate_per_hour_100_00_rs">Rate Per Hour : 100.00 Rs.</string>
     <string name="addimagebtn">addimagebtn</string>
-
+    <string name="adddiscription">Discription</string>
+    <string name="addaddparking">Addparking</string>
+    <string name="aadd_parking">Add Parking</string>
+    <string name="addmobile_number">Mobile Number</string>
+    <string name="addpayment">Payment</string>
 
 
 </resources>
