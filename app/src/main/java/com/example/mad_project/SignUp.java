@@ -39,8 +39,9 @@ public class SignUp extends AppCompatActivity {
 
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 String mobilePattern = "[a-zA-Z]+";
-                String FullName = fName.getText().toString().trim();
+
                 String Email = fEmail.getText().toString().trim();
+                String FullName = fName.getText().toString().trim();
                 String Nic = fNic.getText().toString().trim();
                 String Mobile = fMobile.getText().toString().trim();
                 String Address = fAddress.getText().toString().trim();

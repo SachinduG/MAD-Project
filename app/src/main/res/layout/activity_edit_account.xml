@@ -201,12 +201,25 @@
         android:layout_width="279dp"
         android:layout_height="50dp"
         android:background="@drawable/btn_drawable_selector4"
-        android:text="Remove your Account"
+        android:text="@string/remove_your_account"
         android:textColor="#FFFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Update"
-        app:layout_constraintVertical_bias="0.302" />
+        app:layout_constraintVertical_bias="0.608" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="227dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/btn_drawable_selector1"
+        android:text="@string/view_your_details"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Update" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
