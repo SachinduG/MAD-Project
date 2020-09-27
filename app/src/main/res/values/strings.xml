@@ -67,11 +67,23 @@
     <string name="hello">Hello</string>
     <string name="addrate_per_hour_100_00_rs">Rate Per Hour : 100.00 Rs.</string>
     <string name="addimagebtn">addimagebtn</string>
+
     <string name="adddiscription">Discription</string>
     <string name="addaddparking">Addparking</string>
     <string name="aadd_parking">Add Parking</string>
     <string name="addmobile_number">Mobile Number</string>
     <string name="addpayment">Payment</string>
+
+    <string name="welcome">Welcome!</string>
+    <string name="connect_with_us">Connect With Us</string>
+    <string name="connect_with_us_our_team_is_here_to_help_you">Connect With Us - Our team is here to help you</string>
+    <string name="search_your_parking_here">Search Your Parking Here</string>
+
+    <string name="make_your_parking_with_your_fingers_developed_for_a_easy_and_better_parking_experience">Make your Parking with your fingers.Developed for a easy and better parking experience</string>
+    <string name="hist_Name">Name</string>
+    <string name="view_your_details">View Your Details</string>
+    <string name="remove_your_account">Remove your Account</string>
+
 
 
 </resources>

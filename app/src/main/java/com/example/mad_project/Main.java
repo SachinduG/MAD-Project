@@ -36,12 +36,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
 
 
         btnLogout = findViewById(R.id.btnLogout);
-
-
-
-
-
-
         Email = findViewById(R.id.tvEmailMain);
         sessionManager = new SessionManager(getApplicationContext());
 
@@ -92,7 +86,7 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
                     break;
 
                 case R.id.bookingcardid:
-                    i = new Intent(this, BookingHome.class);
+                    i = new Intent(this, SearchPark.class);
                     startActivity(i);
                     break;
 
@@ -108,11 +102,6 @@ public class Main extends AppCompatActivity implements View.OnClickListener{
 
                 default:
                     break;
-
-
-
         }
     }
-
-
-        }
+}

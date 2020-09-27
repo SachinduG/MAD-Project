@@ -31,7 +31,7 @@ public class Feedback extends AppCompatActivity {
 
                 String FullName = name.getText().toString().trim();
                 String Email = email.getText().toString().trim();
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                boolean isValid = Utils.checkEmailForValidity(email.getText().toString());
                 String Message = message.getText().toString().trim();
 
                 if (FullName.isEmpty()){
@@ -40,7 +40,7 @@ public class Feedback extends AppCompatActivity {
                 }else if(Email.isEmpty()) {
                     email.setError("Fill your Email Address");
 
-                }else if(!email.getText().toString().matches(emailPattern)){
+                }else if(!isValid){
                     email.setError("Enter valid Email Address");
 
                 }else if(Message.isEmpty()){

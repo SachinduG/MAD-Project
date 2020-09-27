@@ -8,7 +8,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
 import android.database.sqlite.SQLiteStatement;
 
+import Database.BOOKUser;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
+
+    private Cursor cursor;
+
+
     public DatabaseHelper(Context context) {
         super(context, "Customer.db", null, 1);
     }
@@ -44,6 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+
     /*public void addEntry(String email, String town, String address, String description, byte[] image) throws SQLiteException {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -56,12 +63,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.insert("Addparking", null, cv);
     }*/
 
+
+
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put("name", name);
+
+
         contentValues.put("email", email);
+        contentValues.put("name", name);
+
         contentValues.put("mobile", mobile);
         contentValues.put("nic", nic);
         contentValues.put("address", address);
@@ -72,23 +84,92 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void delete(String name) {
+
+    public void delete(String email) {
+
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{name});
+        Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{email});
         if (cursor.getCount() > 0) {
-            long result = db.delete("User", "email=?", new String[]{name});
+            long result = db.delete("User", "email=?", new String[]{email});
         }
 
     }
 
     public Cursor get() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("Select * from User", null);
-        return cursor;
+        String query = "Select * from User";
+        String lastrecord = " SELECT * FROM  + User + WHERE email = ?";
+        Cursor res = db.rawQuery(query, null);
+        return res;
 
     }
 
-    public Cursor getname() {
+
+    
+
+    /*public CustomerProfile findCustomer(String email, SQLiteDatabase db) {
+
+        boolean customerExist = false;
+        CustomerProfile customerProfile = null;
+        String fName;
+        String fEmail;
+        String fMobile;
+        String fAddress;
+        String fNic;
+        String fPassword;
+
+        String[] projection = {
+                DBContract.CustomerProfile.USER_EMAIL,
+                DBContract.CustomerProfile.USER_NAME,
+                DBContract.CustomerProfile.USER_MOBILE,
+                DBContract.CustomerProfile.USER_NIC,
+                DBContract.CustomerProfile.USER_ADDRESS,
+                DBContract.CustomerProfile.USER_PASSWORD};
+
+        Cursor cursor = null;
+        try {
+             cursor = db.query(
+                    DBContract.CustomerProfile.USER_TABLE_NAME,  // The table to query
+                    projection,                               // The columns to return
+                    DBContract.CustomerProfile.USER_EMAIL + "=?",                                // The columns for the WHERE clause
+                    new String[]{email},                            // The values for the WHERE clause
+                    null,                                     // don't group the rows
+                    null,                                     // don't filter by row groups
+                    null                                 // The sort order
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+//
+            return null;
+
+        }
+        if (cursor.moveToFirst()) {
+
+            fName = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_NAME));
+            fEmail = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_EMAIL));
+            fMobile = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_MOBILE));
+            fAddress = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_ADDRESS));
+            fNic = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_NIC));
+            fPassword = cursor.getString(cursor.getColumnIndexOrThrow(DBContract.CustomerProfile.USER_PASSWORD));
+
+
+            customerProfile = new CustomerProfile(fName, fEmail, fMobile, fAddress, fNic, fPassword);
+        }
+        return customerProfile;
+
+    }*/
+
+
+
+
+
+
+
+
+
+    public Cursor getname ()
+    {
+
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select name  from User", null);
         return cursor;
@@ -130,7 +211,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put("password", password);
-        db.update("User", values, "email = ?", new String[]{email});
+
+        db.update("User", values, "email = ?",new String[]{email});
+
         db.close();
     }
 
@@ -159,6 +242,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
@@ -166,6 +250,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void queryData(String sql) {
         SQLiteDatabase database = getWritableDatabase();
         database.execSQL(sql);
+
+    public Cursor getdata (String mobile)
+    {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from User where mobile=?",new String[]{mobile});
+        return cursor;
+
+
     }
 }
 
