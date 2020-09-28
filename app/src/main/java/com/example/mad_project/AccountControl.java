@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 public class AccountControl extends AppCompatActivity {
     Button button;
-    TextView fName;
     DatabaseHelper db;
     SessionManager sessionManager;
 
@@ -23,7 +22,6 @@ public class AccountControl extends AppCompatActivity {
         OnClickButtonLister1();
         OnClickButtonLister2();
         OnClickButtonLister3();
-        fName = findViewById(R.id.CusName);
         sessionManager = new SessionManager(getApplicationContext());
 
 

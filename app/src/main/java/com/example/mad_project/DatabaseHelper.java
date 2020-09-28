@@ -3,22 +3,16 @@ package com.example.mad_project;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
-import android.database.sqlite.SQLiteStatement;
-
-import Database.BOOKUser;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Cursor cursor;
 
-
     public DatabaseHelper(Context context) {
-        super(context, "Customer.db", null, 1);
+        super(context, "APS.db", null, 1);
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -64,7 +58,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }*/
 
 
-
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -82,7 +75,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.update("User", contentValues, "email = ?", new String[]{email});
         db.close();
     }
-
 
 
     public void delete(String email) {
@@ -160,15 +152,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }*/
 
 
-
-
-
-
-
-
-
-    public Cursor getname ()
-    {
+    public Cursor getname() {
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select name  from User", null);
@@ -212,7 +196,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("password", password);
 
-        db.update("User", values, "email = ?",new String[]{email});
+        db.update("User", values, "email = ?", new String[]{email});
 
         db.close();
     }
@@ -242,23 +226,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
-
-    public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-    }
-
-    public void queryData(String sql) {
-        SQLiteDatabase database = getWritableDatabase();
-        database.execSQL(sql);
-
-    public Cursor getdata (String mobile)
-    {
-        SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from User where mobile=?",new String[]{mobile});
-        return cursor;
-
-
-    }
 }
 
 

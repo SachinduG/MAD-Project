@@ -36,7 +36,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String Email = etEmail.getText().toString().trim();
-                boolean isValid = Utils.checkEmailForValidity(etEmail.getText().toString());
+                boolean isEmailValid = Utils.checkEmailForValidity(etEmail.getText().toString());
                 String Password = etPassword.getText().toString().trim();
 
                 Boolean CheckUser = db.emailpassword(Email, Password);
@@ -56,7 +56,7 @@ public class SignIn extends AppCompatActivity {
                 }else if(Password.isEmpty()) {
                     etPassword.setError("Enter your Password");
 
-                }else if(!isValid){
+                }else if(!isEmailValid){
                     etEmail.setError("Invalid Email Address!");
 
                 }else{

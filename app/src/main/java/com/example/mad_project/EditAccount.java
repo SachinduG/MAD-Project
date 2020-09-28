@@ -148,36 +148,6 @@ public class EditAccount extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String mobile = fMobile.getText().toString();
-                Cursor res = db.getdata(mobile);
-                if(res.getCount()==0){
-                    Toast.makeText(EditAccount.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                StringBuffer buffer = new StringBuffer();
-                while(res.moveToNext()){
-
-                    buffer.append("Email :"+res.getString(1)+"\n");
-                    buffer.append("Name :"+res.getString(0)+"\n");
-                    buffer.append("Mobile :"+res.getString(2)+"\n");
-
-                    buffer.append("Nic :"+res.getString(1)+"\n");
-                    buffer.append("Address :"+res.getString(1)+"\n");
-                    buffer.append("Password" +
-                            " :"+res.getString(1)+"\n\n");
-                }
-
-                AlertDialog.Builder builder = new AlertDialog.Builder(EditAccount.this);
-                builder.setCancelable(true);
-                builder.setTitle("User Entries");
-                builder.setMessage(buffer.toString());
-                builder.show();
-            }        });
-
     }
 }
 

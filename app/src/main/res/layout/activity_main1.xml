@@ -44,9 +44,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="598dp"
         android:fontFamily="@font/aclonica"
         android:text="APS  Parking App"
@@ -65,10 +64,11 @@
         android:layout_alignParentBottom="true"
 
         android:layout_marginStart="0dp"
+        android:layout_marginTop="182dp"
         android:layout_marginEnd="221dp"
         android:layout_marginRight="221dp"
-        android:layout_marginBottom="115dp"
 
+        android:layout_marginBottom="115dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
