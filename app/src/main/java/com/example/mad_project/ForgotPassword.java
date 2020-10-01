@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class ForgotPassword extends AppCompatActivity {
     Button Next;
     EditText Email, Pass1, Pass2;
@@ -31,7 +34,7 @@ public class ForgotPassword extends AppCompatActivity {
                 String Password1 = Pass1.getText().toString().trim();
                 String Password2 = Pass2.getText().toString().trim();
                 String EmailAddress = Email.getText().toString().trim();
-                boolean isEmailValid = Utils.checkEmailForValidity(Email.getText().toString());
+                boolean isEmailValid = checkEmailForValidity(Email.getText().toString());
 
                 Boolean CheckUser = db.checkUser(Email.getText().toString());
 
@@ -73,4 +76,14 @@ public class ForgotPassword extends AppCompatActivity {
         Pass1.setText("");
         Pass2.setText("");
     }
+
+    private static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean checkEmailForValidity(String email) {
+
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+        return matcher.find();
+    }
+
 }

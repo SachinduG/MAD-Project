@@ -8,6 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Feedback extends AppCompatActivity {
     EditText name, email, message;
     Button btnView, btnSend;
@@ -31,7 +34,7 @@ public class Feedback extends AppCompatActivity {
 
                 String FullName = name.getText().toString().trim();
                 String Email = email.getText().toString().trim();
-                boolean isEmailValid = Utils.checkEmailForValidity(email.getText().toString());
+                boolean isEmailValid = checkEmailForValidity(email.getText().toString());
                 String Message = message.getText().toString().trim();
 
                 if (FullName.isEmpty()){
@@ -80,4 +83,14 @@ public class Feedback extends AppCompatActivity {
         message.setText("");
 
     }
+
+    private static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean checkEmailForValidity(String email) {
+
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+        return matcher.find();
+    }
+
 }

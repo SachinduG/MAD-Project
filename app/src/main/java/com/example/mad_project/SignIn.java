@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignIn extends AppCompatActivity {
     EditText etEmail, etPassword;
     Button SignIn;
@@ -36,7 +39,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String Email = etEmail.getText().toString().trim();
-                boolean isEmailValid = Utils.checkEmailForValidity(etEmail.getText().toString());
+                boolean isEmailValid = checkEmailForValidity(etEmail.getText().toString());
                 String Password = etPassword.getText().toString().trim();
 
                 Boolean CheckUser = db.emailpassword(Email, Password);
@@ -90,4 +93,14 @@ public class SignIn extends AppCompatActivity {
         etEmail.setText("");
         etPassword.setText("");
     }
+
+    private static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean checkEmailForValidity(String email) {
+
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+        return matcher.find();
+    }
+
 }

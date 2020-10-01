@@ -23,10 +23,5 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.mad_project", appContext.getPackageName());
     }
 
-    @Test
-    public void testEmailValidity() {
-        String testEmail = "anupamchugh@gmail.com";
-        Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), Utils.checkEmailForValidity(testEmail), is(true));
-    }
-    
+
 }
