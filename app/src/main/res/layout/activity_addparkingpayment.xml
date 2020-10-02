@@ -24,17 +24,65 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.038" />
 
+
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="347dp"
-        android:layout_height="25dp"
+        android:id="@+id/displayid"
+        android:layout_width="358dp"
+        android:layout_height="47dp"
+        android:text="Parking Lot Display Deuration (In Weeks)"
         android:textColor="#200000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.176" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="350dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Give Number "
+        android:inputType="textPersonName"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#100101"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274" />
+
+    <TextView
+        android:id="@+id/weekfee"
+        android:layout_width="362dp"
+        android:layout_height="47dp"
+        android:text=" Rate For Week 100.00Rs"
+        android:textColor="#DC1515"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.375" />
+
+    <TextView
+        android:id="@+id/addamid"
+        android:layout_width="328dp"
+        android:layout_height="49dp"
+        android:text="Amount is:"
+        android:textColor="#130101"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

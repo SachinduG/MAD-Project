@@ -18,6 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table User(email text primary key, name text, mobile text, nic text, address text, password text)");
         db.execSQL("Create table Feedback(email text primary key, name text, message text)");
+        db.execSQL("Create table Park(email text primary key, town text, address text, mobile text, description text)");
         //db.execSQL("Create table Addparking(email text primary key,town text,address text,description text,image blob)");
     }
 
@@ -25,6 +26,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists User");
         db.execSQL("drop table if exists Feedback");
+        db.execSQL("drop table if exists Park");
+
         //db.execSQL("drop table if exists Addparking");
     }
 
@@ -44,19 +47,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+    public Boolean parkinsert(String email, String town, String address, String mobile, String description) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
 
-    /*public void addEntry(String email, String town, String address, String description, byte[] image) throws SQLiteException {
+        contentValues.put("email", email);
+        contentValues.put("town", town);
+        contentValues.put("address", address);
+        contentValues.put("mobile", mobile);
+        contentValues.put("description", description);
+        long result = db.insert("Park", null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+
+    public void addEntry(String email, String town, String address, String description,String mobile)  {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put("email", email);
         cv.put("town", town);
+        cv.put("mobile",mobile);
         cv.put("address", address);
         cv.put("description", description);
-        cv.put("image", image);
-
         db.insert("Addparking", null, cv);
-    }*/
-
+    }
 
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -226,7 +244,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return false;
     }
 
+
+
+    public Cursor getdata(String mobile) {
+        SQLiteDatabase DB = this.getWritableDatabase();
+        Cursor cursor = DB.rawQuery("Select * from User where mobile=?", new String[]{mobile});
+        return cursor;
+
+
+    }
+
 }
+
+
 
 
 
