@@ -44,9 +44,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginBottom="598dp"
         android:fontFamily="@font/aclonica"
         android:text="APS  Parking App"
@@ -54,18 +53,22 @@
         android:textSize="24sp" />
 
     <LinearLayout
+
         android:layout_width="wrap_content"
         android:layout_height="427dp"
+
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="6dp"
+
+        android:layout_marginStart="0dp"
         android:layout_marginTop="182dp"
-        android:layout_marginEnd="218dp"
-        android:layout_marginRight="218dp"
-        android:layout_marginBottom="116dp"
+        android:layout_marginEnd="221dp"
+        android:layout_marginRight="221dp"
+
+        android:layout_marginBottom="115dp"
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -83,7 +86,7 @@
                 app:srcCompat="@drawable/user1" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/displayid"
                 android:layout_width="62dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="50dp"
@@ -195,7 +198,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewaddid"
         android:layout_width="136dp"
         android:layout_height="126dp"
         android:layout_alignParentStart="true"

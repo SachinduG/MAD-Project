@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignUp extends AppCompatActivity {
     EditText fName, fEmail, fMobile, fAddress, fNic, fPassword, fConfirmPassword;
     Button SignUp;
@@ -37,9 +40,8 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                boolean isEmailValid = checkEmailForValidity(fEmail.getText().toString());
                 String mobilePattern = "[a-zA-Z]+";
-
                 String Email = fEmail.getText().toString().trim();
                 String FullName = fName.getText().toString().trim();
                 String Nic = fNic.getText().toString().trim();
@@ -81,7 +83,7 @@ public class SignUp extends AppCompatActivity {
                 }else if(Nic.length() < 10) {
                     fNic.setError("NIC Number must be => 10 characters!");
 
-                }else if(!fEmail.getText().toString().trim().matches(emailPattern)){
+                }else if(!isEmailValid){
                     fEmail.setError("Invalid Email Address!");
 
                 }else if(fMobile.getText().toString().matches(mobilePattern)){
@@ -128,4 +130,14 @@ public class SignUp extends AppCompatActivity {
         fPassword.setText("");
         fConfirmPassword.setText("");
     }
+
+    private static final Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+    public static boolean checkEmailForValidity(String email) {
+
+        Matcher matcher = VALID_EMAIL_ADDRESS_REGEX.matcher(email);
+        return matcher.find();
+    }
+
 }

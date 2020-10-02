@@ -108,7 +108,9 @@
         android:layout_height="63dp"
         android:layout_marginTop="388dp"
         android:background="@drawable/btn_drawable_selector3"
-        android:text="@string/Addpark"
+
+        android:text="@string/addpark"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -126,15 +128,14 @@
         android:layout_marginBottom="180dp"
         android:background="@color/common_google_signin_btn_text_dark_default"
         android:ems="10"
+        android:hint="@string/description"
         android:inputType="textMultiLine|text"
-        android:text="@string/description"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 
