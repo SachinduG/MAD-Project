@@ -21,4 +21,10 @@ public class ExampleUnitTest {
         Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), SignUp.checkEmailForValidity(testEmail), is(true));
     }
 
+    @Test
+    public void testEmailValidity1() {
+        String testEmail = "anupamchughgmailcom";
+        Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), SignUp.checkEmailForValidity(testEmail), is(false));
+    }
+
 }
