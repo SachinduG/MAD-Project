@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 public class Addparking extends AppCompatActivity {
 
+
     EditText email,town,address,mobile,description;
 
     Button done;
@@ -21,10 +22,21 @@ public class Addparking extends AppCompatActivity {
     DatabaseHelper db;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addparking);
+
+
+
+    }
+    
+
+
+
+
+
 
         db = new DatabaseHelper(this);
         email = findViewById(R.id.emid);
@@ -114,6 +126,7 @@ public class Addparking extends AppCompatActivity {
 
 
 }
+
 
 
 

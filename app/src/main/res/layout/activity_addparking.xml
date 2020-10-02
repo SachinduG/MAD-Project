@@ -108,7 +108,9 @@
         android:layout_height="63dp"
         android:layout_marginTop="388dp"
         android:background="@drawable/btn_drawable_selector3"
+
         android:text="@string/addpark"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
