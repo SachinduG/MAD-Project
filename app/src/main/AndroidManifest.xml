@@ -15,9 +15,6 @@
 
         <activity android:name=".Addparkingpayment"></activity>
         <activity android:name=".Addparking"/>
-            
-
-
         <activity android:name=".Welcome1"></activity>
         <activity android:name=".SearchPark" />
         <activity android:name=".Welcome">
@@ -26,8 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       
-
         <activity
             android:name=".BOOKPayment"
             android:theme="@style/AppTheme2" />

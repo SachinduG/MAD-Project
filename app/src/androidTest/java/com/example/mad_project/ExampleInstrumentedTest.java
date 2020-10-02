@@ -6,7 +6,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 
@@ -24,9 +23,5 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.mad_project", appContext.getPackageName());
     }
 
-    @Test
-    public void testEmailValidity() {
-        String testEmail = "anupamchugh@gmail.com";
-        Assert.assertThat(String.format("Email Validity Test failed for %s ", testEmail), Utils.checkEmailForValidity(testEmail), is(true));
-    }
+
 }
