@@ -19,13 +19,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table User(email text primary key, name text, mobile text, nic text, address text, password text)");
         db.execSQL("Create table Feedback(email text primary key, name text, message text)");
+
     }
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists User");
         db.execSQL("drop table if exists Feedback");
+
     }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public Boolean insert(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -43,6 +49,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -167,6 +178,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+    public Boolean checkkemail(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from Park where email=?",new String[]{email});
+        if(cursor.getCount() > 0)
+            return false;
+        else
+            return true;
+    }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public Boolean emailpassword(String email, String password){
         SQLiteDatabase db = this.getReadableDatabase();
