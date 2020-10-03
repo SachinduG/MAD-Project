@@ -22,6 +22,7 @@ public class Addparking extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addparking);
+
         db = new DatabaseHelper(this);
         email = findViewById(R.id.emid);
         town = findViewById(R.id.townid);
