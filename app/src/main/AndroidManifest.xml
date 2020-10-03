@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mad_project">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,8 +12,10 @@
         android:label="APS"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
 
+        <activity android:name=".AddparkingDelete"></activity>
         <activity android:name=".Addparkingpayment"/>
         <activity android:name=".Addparking"/>
         <activity android:name=".Welcome1"/>
@@ -20,6 +23,7 @@
         <activity android:name=".Welcome">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
