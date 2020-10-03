@@ -269,7 +269,7 @@ app:layout_constraintStart_toStartOf="parent">
 <com.google.android.material.textfield.TextInputEditText
     android:id="@+id/Editmobile"
     style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-   
+
     android:layout_width="347dp"
     android:layout_height="66dp"
     android:background="@drawable/rounded_corner" />
