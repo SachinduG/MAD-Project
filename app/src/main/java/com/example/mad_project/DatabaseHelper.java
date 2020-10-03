@@ -67,6 +67,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
+
+
     public void addEntry(String email, String town, String address, String description,String mobile)  {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -104,6 +106,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{email});
         if (cursor.getCount() > 0) {
             long result = db.delete("User", "email=?", new String[]{email});
+        }
+
+    }
+
+    public void parkdelete(String email) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{email});
+        if (cursor.getCount() > 0) {
+            long result = db.delete("Park", "email=?", new String[]{email});
         }
 
     }

@@ -29,7 +29,7 @@
         android:id="@+id/displayid"
         android:layout_width="358dp"
         android:layout_height="47dp"
-        android:text="Parking Lot Display Deuration (In Weeks)"
+        android:text="@string/addparking_lot_display_deuration_in_weeks"
         android:textColor="#200000"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -41,48 +41,59 @@
         app:layout_constraintVertical_bias="0.176" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/numid"
         android:layout_width="350dp"
         android:layout_height="54dp"
         android:background="@drawable/rounded_corner"
         android:ems="10"
         android:gravity="center"
-        android:hint="Give Number "
-        android:inputType="textPersonName"
+        android:hint="@string/addgive_number"
+        android:inputType="number"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#100101"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/displayid"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.274" />
+        app:layout_constraintVertical_bias="0.274"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/weekfee"
-        android:layout_width="362dp"
-        android:layout_height="47dp"
-        android:text=" Rate For Week 100.00Rs"
+        android:layout_width="357dp"
+        android:layout_height="76dp"
+        android:text="@string/addweek_rental_50_00rs_up_to_two_weeks_more_than_two_weeks_week_rental_100_00rs"
         android:textColor="#DC1515"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/numid"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.384" />
 
     <TextView
-        android:id="@+id/addamid"
+        android:id="@+id/amntid"
         android:layout_width="328dp"
         android:layout_height="49dp"
-        android:text="Amount is:"
-        android:textColor="#130101"
+        android:gravity="center"
+        android:textColor="#E53935"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/weekfee"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
+
+    <Button
+        android:id="@+id/btnamt"
+        android:layout_width="286dp"
+        android:layout_height="66dp"
+        android:background="@drawable/btn_drawable_selector1"
+        android:text="@string/addamount"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.524" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,21 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".Addparkingpayment"></activity>
-        <activity android:name=".Addparking"/>
-            
-
-
-        <activity android:name=".Welcome1"></activity>
-        <activity android:name=".SearchPark" />
-        <activity android:name=".Welcome">
+        <activity android:name=".AddparkingDelete"></activity>
+        <activity android:name=".Addparkingpayment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       
+        <activity android:name=".Addparking" />
+        <activity android:name=".Welcome1" />
+        <activity android:name=".SearchPark" />
+        <activity android:name=".Welcome"/>
 
         <activity
             android:name=".BOOKPayment"
