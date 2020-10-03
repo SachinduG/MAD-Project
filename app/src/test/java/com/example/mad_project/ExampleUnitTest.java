@@ -13,6 +13,7 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
     private SignUp signup;
+    private BOOKPayment payment;
 
     @Test
     public void testEmailValidity() {
@@ -25,4 +26,25 @@ public class ExampleUnitTest {
         String testEmail = "anupamchughgmailcom";
         Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), SignUp.checkEmailForValidity(testEmail), is(false));
     }
+<<<<<<< HEAD
+=======
+
+
+    @Test
+    public  void setBOOkPayment_check(){
+        float result = payment.bookpaymentCal(5);
+        assertEquals(500,result,0.001);
+
+    }
+
+    @Test
+    public  void setBOOkPayment_check1(){
+        float result = payment.bookpaymentCal(4);
+        assertEquals(200,result,0.001);
+
+    }
+
+
+
+>>>>>>> 9f57059c6939adf49cd5df85546b4d777aee6189
 }
