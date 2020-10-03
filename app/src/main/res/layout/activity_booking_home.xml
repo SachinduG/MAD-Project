@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/car1"
     tools:context=".BookingHome">
 
 
@@ -30,7 +31,8 @@
             android:id="@+id/BookName"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -58,7 +60,8 @@
             android:id="@+id/BookEmail"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -85,7 +88,8 @@
             android:id="@+id/BookNIC"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -113,7 +117,8 @@
             android:id="@+id/BookMobile"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>

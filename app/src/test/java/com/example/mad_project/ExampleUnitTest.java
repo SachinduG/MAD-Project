@@ -1,7 +1,6 @@
 package com.example.mad_project;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -26,5 +25,4 @@ public class ExampleUnitTest {
         String testEmail = "anupamchughgmailcom";
         Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), SignUp.checkEmailForValidity(testEmail), is(false));
     }
-
 }
