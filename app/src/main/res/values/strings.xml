@@ -93,7 +93,17 @@
     <string name="addamount">Amount</string>
 
     <string name="addmobile">Mobile</string>
-
+    <string name="homeuser">User</string>
+    <string name="homeadd_parking">Add Parking</string>
+    <string name="homebooking">Booking</string>
+    <string name="homemap">Map</string>
+    <string name="homeaps_parking_app">APS Parking App</string>
+    <string name="homeimgpark0">imgpark0</string>
+    <string name="himgparking5">imgparking5</string>
+    <string name="hparkingimg4">parkingimg4</string>
+    <string name="hparkimg1">parkimg1</string>
+    <string name="hparkingimg3">parkingimg3</string>
+    <string name="hparkingimg2">parkingimg2</string>
 
 
 </resources>
