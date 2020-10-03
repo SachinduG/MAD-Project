@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
+z
     android:alpha="6.0"
     android:background="@drawable/car1"
     tools:context=".BookingProfileManagement">
