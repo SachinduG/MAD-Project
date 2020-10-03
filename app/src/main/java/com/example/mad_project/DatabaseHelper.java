@@ -10,11 +10,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Cursor cursor;
 
-
     public DatabaseHelper(Context context) {
-        super(context, "Customer.db", null, 1);
+        super(context, "APS.db", null, 1);
     }
-
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -79,7 +77,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put("description", description);
         db.insert("Addparking", null, cv);
     }
-
 
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -260,6 +257,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
     public Cursor getdata(String mobile) {
         SQLiteDatabase DB = this.getWritableDatabase();
         Cursor cursor = DB.rawQuery("Select * from User where mobile=?", new String[]{mobile});
@@ -267,6 +265,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     }
+
 }
 
 
