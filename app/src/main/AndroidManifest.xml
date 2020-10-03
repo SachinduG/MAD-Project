@@ -15,9 +15,9 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label">
 
-        <activity android:name=".Addparkingpayment"></activity>
+        <activity android:name=".Addparkingpayment"/>
         <activity android:name=".Addparking"/>
-        <activity android:name=".Welcome1"></activity>
+        <activity android:name=".Welcome1"/>
         <activity android:name=".SearchPark" />
         <activity android:name=".Welcome">
             <intent-filter>
@@ -25,21 +25,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".BOOKPayment"
-            android:theme="@style/AppTheme2" />
+        <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
         <activity android:name=".AccountControl" />
         <activity android:name=".Feedback" />
-        <activity android:name=".EditBookingProfile" />
-        <activity
-            android:name=".BookingProfileManagement"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".BookingHome"
-            android:theme="@style/AppTheme2" />
+        <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" />
+        <activity android:name=".BookingHome" android:theme="@style/AppTheme2" />
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".Main" />

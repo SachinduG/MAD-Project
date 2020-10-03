@@ -14,29 +14,14 @@ import android.widget.Toast;
 
 public class Addparking extends AppCompatActivity {
 
-
     EditText email,town,address,mobile,description;
-
     Button done;
-
     DatabaseHelper db;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addparking);
-
-
-
-
-    
-
-
-
-
-
 
         db = new DatabaseHelper(this);
         email = findViewById(R.id.emid);
@@ -44,9 +29,7 @@ public class Addparking extends AppCompatActivity {
         address = findViewById(R.id.addid);
         mobile = findViewById(R.id.mobile);
         description = findViewById(R.id.descrip);
-
         done = findViewById(R.id.button);
-
 
         done.setOnClickListener(new View.OnClickListener() {
 
