@@ -17,15 +17,10 @@
         <activity android:name=".Addparking"/>
         <activity android:name=".Welcome1"></activity>
         <activity android:name=".SearchPark" />
-        <activity android:name=".Welcome">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".BOOKPayment"
-            android:theme="@style/AppTheme2" />
+        <activity android:name=".Welcome"/>
+        <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2" />
+
+
         <activity android:name=".ForgotPassword" />
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
@@ -35,9 +30,13 @@
         <activity
             android:name=".BookingProfileManagement"
             android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".BookingHome"
-            android:theme="@style/AppTheme2" />
+        <activity android:name=".BookingHome" android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".SignUp" />
         <activity android:name=".SignIn" />
         <activity android:name=".Main" />
