@@ -1,7 +1,6 @@
 package com.example.mad_project;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -28,7 +27,6 @@ public class ExampleUnitTest {
         Assert.assertThat(String.format("Email Address Validity Test failed for %s ", testEmail), SignUp.checkEmailForValidity(testEmail), is(false));
     }
 
-
     @Test
     public  void setBOOkPayment_check(){
         float result = payment.bookpaymentCal(5);
@@ -42,9 +40,5 @@ public class ExampleUnitTest {
         assertEquals(200,result,0.001);
 
     }
-
-
-
-
 
 }

@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".BookingHome"
     android:alpha="6.0"
-    android:background="@drawable/carparking123">
+    android:background="@drawable/carparking123"
+    tools:context=".BookingHome">
+
+
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -23,13 +26,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-       /*style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"*/
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookName"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:background="@drawable/rounded_corner"
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -52,9 +56,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookEmail"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:background="@drawable/rounded_corner"
+
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -79,9 +84,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookNIC"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:background="@drawable/rounded_corner"
+
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -107,9 +113,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookMobile"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:background="@drawable/rounded_corner"
+
             android:layout_width="347dp"
-            android:layout_height="66dp" />
+            android:layout_height="66dp"
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
