@@ -5,12 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@android:color/white"
+    android:background="@drawable/carbackround2"
     tools:context=".BookingProfileManagement">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlineEdit1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="0dp"
         android:layout_marginTop="71dp"
@@ -20,7 +19,7 @@
         app:counterEnabled="true"
         app:counterMaxLength="20"
         app:helperText=" email"
-        app:layout_constraintBottom_toTopOf="@+id/buttonsearchj"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,6 +29,7 @@
             android:id="@+id/EDITBnamee"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
+            android:background="@drawable/rounded_corner"
             android:layout_height="66dp" />/>
 
 
@@ -38,7 +38,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlineEdit2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
         android:layout_marginBottom="372dp"
@@ -56,6 +55,7 @@
             android:id="@+id/EDITBEmail"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
+            android:background="@drawable/rounded_corner"
             android:layout_height="66dp" />
 
 
@@ -63,7 +63,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlineEdit3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
         android:layout_marginBottom="248dp"
@@ -80,6 +79,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/EDITBNic"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+            android:background="@drawable/rounded_corner"
             android:layout_width="347dp"
             android:layout_height="66dp" />
 
@@ -89,7 +89,6 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outlineEdit4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
         android:layout_marginBottom="124dp"
@@ -106,6 +105,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/Editmobile"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
+            android:background="@drawable/rounded_corner"
             android:layout_width="347dp"
             android:layout_height="66dp" />
 
@@ -115,16 +115,14 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/EDitUpdatebtn"
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="260dp"
+        android:layout_width="104dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="165dp"
         android:text="@string/BUpdate"
         app:backgroundTint="#450CF1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/delete"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outlineEdit4" />
 
@@ -143,28 +141,27 @@
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="56dp"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="52dp"
         android:text="@string/Bdelete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonsearchj"
-        app:layout_constraintTop_toBottomOf="@+id/outlineEdit4" />
+        app:layout_constraintStart_toEndOf="@+id/EDitUpdatebtn"
+        app:layout_constraintTop_toBottomOf="@+id/outlineEdit1" />
 
     <Button
         android:id="@+id/buttonsearchj"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="172dp"
         android:layout_marginBottom="56dp"
         android:text="@string/Bsearch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlineEdit1" />
+        app:layout_constraintTop_toBottomOf="@+id/outlineEdit1"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

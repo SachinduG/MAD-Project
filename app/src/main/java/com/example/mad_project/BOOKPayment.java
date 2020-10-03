@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class BOOKPayment extends AppCompatActivity {
 
@@ -26,9 +27,6 @@ public class BOOKPayment extends AppCompatActivity {
 
 
 
-
-
-
     }
 
 
@@ -40,17 +38,34 @@ public class BOOKPayment extends AppCompatActivity {
         tot = findViewById(R.id.calme);
 
 
-        String num1 = n1.getText().toString();
+        if(n1.getText().length() == 0) {
 
-        convertIN = Integer.parseInt(num1);
+            Toast.makeText(this, "please enter a number", Toast.LENGTH_SHORT).show();
+            return;
 
-        int ammount = convertIN * 100 ;
+        }
+
+
+            String num1 = n1.getText().toString();
+
+            convertIN = Integer.parseInt(num1);
+
+
+           // int ammount = convertIN * 100 ;
+
+
+            cal.setText( convertIN + " charge "  +" = " +(bookpaymentCal(convertIN)));
 
 
 
 
-        cal.setText( convertIN + " charge "  +" = " +(ammount));
 
+
+    }
+
+    public  static  float bookpaymentCal(float number){
+
+        return (number * 100);
 
     }
 }
