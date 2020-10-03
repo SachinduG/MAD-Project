@@ -18,18 +18,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table User(email text primary key, name text, mobile text, nic text, address text, password text)");
         db.execSQL("Create table Feedback(email text primary key, name text, message text)");
+
         db.execSQL("Create table Park(email text primary key, town text, address text, mobile text, description text)");
         //db.execSQL("Create table Addparking(email text primary key,town text,address text,description text,image blob)");
+
     }
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists User");
         db.execSQL("drop table if exists Feedback");
+
         db.execSQL("drop table if exists Park");
 
-        //db.execSQL("drop table if exists Addparking");
+        
+
     }
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public Boolean insert(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -46,6 +54,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else
             return true;
     }
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
     public Boolean parkinsert(String email, String town, String address, String mobile, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -67,16 +82,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public void addEntry(String email, String town, String address, String description,String mobile)  {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues cv = new ContentValues();
-        cv.put("email", email);
-        cv.put("town", town);
-        cv.put("mobile",mobile);
-        cv.put("address", address);
-        cv.put("description", description);
-        db.insert("Addparking", null, cv);
-    }
+
+   
+    
+
+
 
     public void update(String name, String email, String mobile, String nic, String address, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -212,7 +222,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
+
+    public Boolean checkkemail(String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from Park where email=?",new String[]{email});
+        if(cursor.getCount() > 0)
+            return false;
+        else
+            return true;
+    }
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+   
     public Boolean emailpassword(String email, String password) {
+
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("Select * from User where email=? and password=?", new String[]{email, password});
         if (cursor.getCount() > 0)

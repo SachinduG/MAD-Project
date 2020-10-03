@@ -83,6 +83,7 @@
     <string name="hist_Name">Name</string>
     <string name="view_your_details">View Your Details</string>
     <string name="remove_your_account">Remove your Account</string>
+
     <string name="description">description</string>
     <string name="parkmobile">parkmobile</string>
     <string name="addpark">Addpark</string>
@@ -92,6 +93,7 @@
     <string name="addamount">Amount</string>
 
     <string name="addmobile">Mobile</string>
+
 
 
 </resources>
