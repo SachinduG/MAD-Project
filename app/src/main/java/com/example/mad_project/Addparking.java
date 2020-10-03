@@ -86,7 +86,7 @@ public class Addparking extends AppCompatActivity {
                         startActivity(intent);
                         clearControls();
                     } else {
-                        Toast.makeText(getApplicationContext(), "Registration Unsuccessful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "Add Parking Unsucessfull", Toast.LENGTH_SHORT).show();
                     }
 
 

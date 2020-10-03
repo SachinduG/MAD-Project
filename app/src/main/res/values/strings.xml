@@ -87,6 +87,12 @@
     <string name="description">description</string>
     <string name="parkmobile">parkmobile</string>
     <string name="addpark">Addpark</string>
+    <string name="addparking_lot_display_deuration_in_weeks">Parking Lot Display Deuration (In Weeks)</string>
+    <string name="addgive_number">Give Number</string>
+    <string name="addweek_rental_50_00rs_up_to_two_weeks_more_than_two_weeks_week_rental_100_00rs">Week Rental 50.00Rs Up to Two Weeks More Than Two Weeks Week Rental 100.00Rs</string>
+    <string name="addamount">Amount</string>
+
+    <string name="addmobile">Mobile</string>
 
 
 
