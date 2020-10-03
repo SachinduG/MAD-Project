@@ -46,6 +46,8 @@ public class BookingHome extends AppCompatActivity {
 
                 DBHandler dbHandler = new DBHandler(getApplicationContext());
 
+
+
                 if(name.getText().toString().isEmpty()){
                     name.setError("enter the name");
 
