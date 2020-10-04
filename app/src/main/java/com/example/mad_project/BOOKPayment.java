@@ -2,6 +2,7 @@ package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,7 +16,7 @@ public class BOOKPayment extends AppCompatActivity {
 
     EditText n1,b1,b2,b3,b4;
     TextView cal;
-    Button tot;
+    Button tot,list;
     int convertIN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,16 @@ public class BOOKPayment extends AppCompatActivity {
 
 
 
+        list = findViewById(R.id.button11);
 
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(),BookuserList.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

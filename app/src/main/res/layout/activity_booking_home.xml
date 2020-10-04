@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="@drawable/car1"
+    android:alpha="6.0"
+    android:background="@drawable/carparking123"
     tools:context=".BookingHome">
-
-
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/outline1"
         android:layout_width="413dp"
         android:layout_height="160dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="500dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="396dp"
         android:hint="@string/BOOkname"
         android:padding="30dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:helperText=" Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookName"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:background="@drawable/rounded_corner"
             android:layout_width="347dp"
             android:layout_height="66dp"
-            />
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -42,15 +42,18 @@
         android:id="@+id/outline2"
         android:layout_width="413dp"
         android:layout_height="160dp"
-        android:layout_marginTop="199dp"
-        android:layout_marginBottom="372dp"
+        android:layout_marginTop="250dp"
         android:hint="@string/BOOKemail"
         android:padding="30dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:helperText=" Email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookEmail"
@@ -67,8 +70,7 @@
         android:id="@+id/outline3"
         android:layout_width="413dp"
         android:layout_height="160dp"
-        android:layout_marginTop="323dp"
-        android:layout_marginBottom="248dp"
+        android:layout_marginTop="400dp"
         android:hint="@string/BOOKNIC"
         android:padding="30dp"
         app:counterEnabled="true"
@@ -78,7 +80,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookNIC"
@@ -96,8 +99,7 @@
         android:id="@+id/outline4"
         android:layout_width="413dp"
         android:layout_height="160dp"
-        android:layout_marginTop="447dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginTop="550dp"
         android:hint="@string/BOOKmobile"
         android:padding="30dp"
         app:counterEnabled="true"
@@ -107,7 +109,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/BookMobile"
@@ -123,28 +126,28 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/BookSubmit1"
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
-        android:layout_width="111dp"
-        android:layout_height="48dp"
+        android:layout_width="99dp"
+        android:layout_height="64dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="643dp"
-        android:layout_marginEnd="171dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="120dp"
         android:layout_marginBottom="40dp"
         android:text="Submit"
         app:backgroundTint="#450CF1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.27999997" />
+        app:layout_constraintTop_toBottomOf="@+id/outline4"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/B"
         android:layout_width="310dp"
         android:layout_height="49dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="Booking profile"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Booking Home"
         android:textAlignment="center"
         android:textColor="#A0275B"
         android:textSize="30sp"

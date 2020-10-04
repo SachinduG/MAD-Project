@@ -50,7 +50,7 @@
     <string name="address">Address</string>
     <string name="rate_per_hour">Rate per Hour</string>
     <string name="addemail">Email</string>
-    <string name="hours">enter Hours</string>
+    <string name="hours">Enter Hours</string>
     <string name="chargers">chargers</string>
     <string name="bookingprofileheader">Booking Profile</string>
     <string name="header4">Enter Your Email Address</string>
@@ -67,31 +67,27 @@
     <string name="hello">Hello</string>
     <string name="addrate_per_hour_100_00_rs">Rate Per Hour : 100.00 Rs.</string>
     <string name="addimagebtn">addimagebtn</string>
-
     <string name="adddiscription">Discription</string>
     <string name="addaddparking">Addparking</string>
     <string name="aadd_parking">Add Parking</string>
     <string name="addmobile_number">Mobile Number</string>
     <string name="addpayment">Payment</string>
-
     <string name="welcome">Welcome!</string>
     <string name="connect_with_us">Connect With Us</string>
     <string name="connect_with_us_our_team_is_here_to_help_you">Connect With Us - Our team is here to help you</string>
     <string name="search_your_parking_here">Search Your Parking Here</string>
-
     <string name="make_your_parking_with_your_fingers_developed_for_a_easy_and_better_parking_experience">Make your Parking with your fingers.Developed for a easy and better parking experience</string>
     <string name="hist_Name">Name</string>
     <string name="view_your_details">View Your Details</string>
     <string name="remove_your_account">Remove your Account</string>
-
     <string name="description">description</string>
     <string name="parkmobile">parkmobile</string>
     <string name="addpark">Addpark</string>
+    <string name="Bookpay">payment</string>
     <string name="addparking_lot_display_deuration_in_weeks">Parking Lot Display Deuration (In Weeks)</string>
     <string name="addgive_number">Give Number</string>
     <string name="addweek_rental_50_00rs_up_to_two_weeks_more_than_two_weeks_week_rental_100_00rs">Week Rental 50.00Rs Up to Two Weeks More Than Two Weeks Week Rental 100.00Rs</string>
     <string name="addamount">Amount</string>
-
     <string name="addmobile">Mobile</string>
     <string name="homeuser">User</string>
     <string name="homeadd_parking">Add Parking</string>
@@ -114,6 +110,7 @@
     <string name="payimg1">payimg1</string>
     <string name="payimg2">payimg2</string>
     <string name="payimg3">payimg3</string>
+
 
 
 </resources>
