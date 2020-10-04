@@ -2,6 +2,7 @@ package com.example.mad_project.adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mad_project.AccountControl;
+import com.example.mad_project.BookingHome;
+import com.example.mad_project.EditAccount;
 import com.example.mad_project.R;
 import com.example.mad_project.model.Parks;
 
@@ -23,14 +27,19 @@ class SearchViewHolder extends RecyclerView.ViewHolder{
     public SearchViewHolder(@NonNull View itemView) {
         super(itemView);
 
+
         town = (TextView)itemView.findViewById(R.id.town);
         address = (TextView)itemView.findViewById(R.id.address);
+
     }
+
 }
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
     private Context context;
     private List<Parks> parks;
+
+
 
     public SearchAdapter(Context context, List<Parks> parks) {
         this.context = context;
@@ -53,8 +62,11 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchViewHolder> {
 
     }
 
+
     @Override
     public int getItemCount() {
         return parks.size();
     }
+
+
 }

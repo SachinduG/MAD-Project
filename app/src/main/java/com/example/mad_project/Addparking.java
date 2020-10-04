@@ -82,7 +82,7 @@ public class Addparking extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(), "Your Park added Successfully", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(getApplicationContext(), Main.class);
+                        Intent intent = new Intent(getApplicationContext(), Addparkingpayment.class);
                         startActivity(intent);
                         clearControls();
                     } else {

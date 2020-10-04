@@ -103,5 +103,20 @@
     <string name="BookPaycard">pay</string>
     <string name="BOOkuserlist">View book list</string>
 
+    <string name="next">NEXT</string>
+
+    <string name="paycard_details">Card Details</string>
+    <string name="paypay_amount">Pay Amount</string>
+    <string name="payname_on_card">Name On Card</string>
+    <string name="paycard_number">Card Number</string>
+    <string name="paycvv">CVV</string>
+    <string name="paymm_yy">MM/YY</string>
+    <string name="paywe_accept">We Accept</string>
+    <string name="payimg1">payimg1</string>
+    <string name="payimg2">payimg2</string>
+    <string name="payimg3">payimg3</string>
+
+
+
 
 </resources>
