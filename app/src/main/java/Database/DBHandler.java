@@ -274,6 +274,15 @@ public class DBHandler extends SQLiteOpenHelper {
         return usernames;
     }
 
+    public Boolean checkNIC(String nic) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("Select * from Bookingdetails where nic=?", new String[]{nic});
+        if (cursor.getCount() > 0)
+            return false;
+        else
+            return true;
+    }
+
 
 }
 
