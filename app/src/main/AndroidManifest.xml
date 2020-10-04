@@ -15,6 +15,7 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label">
 
+        <activity android:name=".Pay"></activity>
         <activity android:name=".SearchUsersBooking" android:theme="@style/AppTheme2"/>
         <activity android:name=".BookuserList"  android:theme="@style/AppTheme2" />
         <activity android:name=".AddparkingDelete"></activity>
@@ -35,12 +36,12 @@
         <activity android:name=".AccountControl" ></activity>
         <activity android:name=".Feedback" ></activity>
         <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" ></activity>
-        <activity android:name=".BookingHome" android:theme="@style/AppTheme2" ></activity>
+        <activity android:name=".BookingHome" android:theme="@style/AppTheme2" />
         <activity android:name=".SignUp"></activity>
         <activity android:name=".SignIn"></activity>
         <activity android:name=".Main"></activity>
         <activity android:name=".MapNavigate"></activity>
-
+        
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

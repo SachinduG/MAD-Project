@@ -74,8 +74,9 @@
         android:id="@+id/amntid"
         android:layout_width="328dp"
         android:layout_height="49dp"
+        android:autoText="true"
         android:gravity="center"
-        android:textColor="#E53935"
+        android:textColor="#800404"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -96,4 +97,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="162dp"
+        android:layout_height="63dp"
+        android:background="@drawable/btn_drawable_selector4"
+        android:fontFamily="@font/aclonica"
+        android:text="@string/next"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818" />
 </androidx.constraintlayout.widget.ConstraintLayout>

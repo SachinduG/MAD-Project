@@ -10,9 +10,10 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchout1"
-        android:layout_width="413dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="71dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="362dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="68dp"
         android:layout_marginBottom="396dp"
         android:hint="@string/BOOKNIC"
         android:padding="30dp"
@@ -21,24 +22,24 @@
         app:helperText=" email"
         app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/searchBookNIC"
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
+            android:layout_width="294dp"
 
-            android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
+            android:layout_height="52dp"
+            android:background="@drawable/input_design" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
         android:layout_marginBottom="372dp"
@@ -55,13 +56,14 @@
             android:layout_width="347dp"
 
             android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
+            android:background="@drawable/input_design" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/searchout3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="413dp"
         android:layout_height="160dp"
         android:layout_marginBottom="248dp"
@@ -78,7 +80,7 @@
 
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
+            android:background="@drawable/input_design" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -105,24 +107,24 @@
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
+            android:background="@drawable/input_design" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/searchupdate"
+        android:id="@+id/searchdetails"
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
         android:layout_width="108dp"
         android:layout_height="52dp"
-        android:text="@string/BUpdate"
+        android:text="@string/Bsearch"
         app:backgroundTint="#450CF1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.805"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.929" />
+        app:layout_constraintVertical_bias="0.251" />
 
     <TextView
         android:id="@+id/searchbook"
@@ -138,16 +140,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/searchdelete"
+        android:id="@+id/searchupdated"
         android:layout_width="104dp"
         android:layout_height="51dp"
-        android:text="@string/Bdelete"
+        android:text="@string/BUpdate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="0.936" />
+
+    <Button
+        android:id="@+id/paynumber2"
+        android:layout_width="118dp"
+        android:layout_height="55dp"
+        android:text="@string/BookPaycard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.936" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
