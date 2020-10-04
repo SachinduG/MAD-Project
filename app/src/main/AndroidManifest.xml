@@ -15,8 +15,12 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label">
 
-        <activity android:name=".Pay"></activity>
-        
+        <activity android:name=".Pay">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         
 
         <activity android:name=".SearchUsersBooking" android:theme="@style/AppTheme2"/>
@@ -30,10 +34,7 @@
         <activity android:name=".SearchPark"></activity>
         <activity android:name=".Welcome">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
 
       
