@@ -15,11 +15,10 @@
         android:layout_width="413dp"
         android:layout_height="0dp"
         android:layout_marginTop="80dp"
+        android:layout_marginBottom="445dp"
         android:hint="@string/BOOkname"
         android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="20"
-        app:helperText=" name"
+        app:layout_constraintBottom_toTopOf="@+id/delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +29,7 @@
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/input_design" />
+            android:background="@drawable/rounded_corner" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,9 +42,6 @@
         android:layout_marginBottom="113dp"
         android:hint="@string/BOOKemail"
         android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="30"
-        app:helperText=" email"
         app:layout_constraintBottom_toTopOf="@+id/outlineEdit4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -57,7 +53,7 @@
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/input_design" />
+            android:background="@drawable/rounded_corner" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,7 +79,7 @@
 
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/input_design" />
+            android:background="@drawable/rounded_corner" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +106,7 @@
             style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="347dp"
             android:layout_height="66dp"
-            android:background="@drawable/input_design" />
+            android:background="@drawable/rounded_corner" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,14 +115,14 @@
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
         android:layout_width="108dp"
         android:layout_height="52dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="24dp"
         android:text="@string/BUpdate"
         app:backgroundTint="#450CF1"
-        app:layout_constraintEnd_toStartOf="@+id/delete"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlineEdit4" />
+        app:layout_constraintTop_toTopOf="@+id/outlineEdit4" />
 
     <TextView
         android:id="@+id/EditUpdateprofile"
@@ -144,14 +140,15 @@
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="104dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="50dp"
+        android:layout_width="108dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="181dp"
+        android:layout_marginEnd="292dp"
+        android:layout_marginBottom="23dp"
         android:text="@string/Bdelete"
-        app:layout_constraintBaseline_toBaselineOf="@+id/EDitUpdatebtn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/outlineEdit4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

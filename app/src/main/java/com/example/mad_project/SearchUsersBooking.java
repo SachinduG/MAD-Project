@@ -2,6 +2,7 @@ package com.example.mad_project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -54,5 +55,57 @@ public class SearchUsersBooking extends AppCompatActivity {
                 }
             }
         });
+
+
+
+        update.setOnClickListener(new View.OnClickListener() {
+
+
+
+            @Override
+            public void onClick(View view) {
+
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                String mobilePattern = "[a-zA-Z]+";
+
+
+                if (!email.getText().toString().trim().matches(emailPattern)) {
+
+                    email.setError("invalid email address");
+                } else if (mobile.getText().toString().trim().matches(mobilePattern)) {
+
+                    mobile.setError("invalid mobile");
+                } else if (mobile.getText().toString().trim().matches(mobilePattern)) {
+
+                    mobile.setError("invalid mobile");
+                } else if (mobile.length() < 10) {
+                    mobile.setError("mobile must be 10 number ");
+                } else {
+
+
+
+                    DBHandler dbHandler = new DBHandler(getApplicationContext());
+
+
+                    Boolean satus = dbHandler.UpdateBookDetails(name.getText().toString(), email.getText().toString(), nic.getText().toString(), mobile.getText().toString());
+
+                    Intent intent= new Intent(getApplicationContext(),BOOKPayment.class);
+                    startActivity(intent);
+
+                    if (satus) {
+
+
+                        Toast.makeText(SearchUsersBooking.this, "updated", Toast.LENGTH_SHORT).show();
+                    } else {
+
+                        Toast.makeText(SearchUsersBooking.this, "not updated", Toast.LENGTH_SHORT).show();
+
+
+
+                    }
+                }
+            }
+        });
+
     }
 }
