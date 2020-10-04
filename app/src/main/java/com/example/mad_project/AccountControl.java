@@ -22,6 +22,7 @@ public class AccountControl extends AppCompatActivity {
         OnClickButtonLister1();
         OnClickButtonLister2();
         OnClickButtonLister3();
+        OnClickButtonLister4 ();
         sessionManager = new SessionManager(getApplicationContext());
 
 
@@ -68,6 +69,19 @@ public class AccountControl extends AppCompatActivity {
                 }
             );
         }
+    public void OnClickButtonLister4 () {
+        button = (Button) findViewById(R.id.button2);
+        button.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        Intent intent = new Intent(AccountControl.this, Addparking.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+    }
 
         public void OnClickButtonLister3(){
             button = (Button) findViewById(R.id.button4);

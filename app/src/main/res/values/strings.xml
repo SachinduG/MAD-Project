@@ -100,5 +100,6 @@
     <string name="hparkimg1">parkimg1</string>
     <string name="hparkingimg3">parkingimg3</string>
     <string name="hparkingimg2">parkingimg2</string>
+    <string name="next">NEXT</string>
 
 </resources>
