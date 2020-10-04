@@ -15,8 +15,9 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label">
 
-        <activity android:name=".Pay"></activity>
-        
+        <activity android:name=".Pay">
+
+    </activity>
         
 
         <activity android:name=".SearchUsersBooking" android:theme="@style/AppTheme2"/>
@@ -28,14 +29,17 @@
         <activity android:name=".Addparking"></activity>
         <activity android:name=".Welcome1"></activity>
         <activity android:name=".SearchPark"></activity>
-        <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2" >
+
 
         <activity android:name=".Welcome">
+
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
 
