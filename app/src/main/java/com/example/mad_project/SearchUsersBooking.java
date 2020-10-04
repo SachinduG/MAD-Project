@@ -22,11 +22,12 @@ public class SearchUsersBooking extends AppCompatActivity {
         setContentView(R.layout.activity_search_users_booking);
 
 
-        search = findViewById(R.id.searchupdate);
+        search = findViewById(R.id.searchdetails);
         name = findViewById(R.id.searchBookname);
         email = findViewById(R.id.searchBookemail);
         nic = findViewById(R.id.searchBookNIC);
         mobile = findViewById(R.id.searchBookmobile);
+        update = findViewById(R.id.searchupdated);
 
 
         search.setOnClickListener(new View.OnClickListener() {
