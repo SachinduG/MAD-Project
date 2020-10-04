@@ -44,7 +44,8 @@ btnamt.setOnClickListener(new View.OnClickListener() {
 
 public static int  getamount(int amount){
 
-        if(amount>0&&amount <= 2){
+        
+        if(amount>0 && amount <= 2){
             return amount * 50;
         }else{
             return amount * 100;
