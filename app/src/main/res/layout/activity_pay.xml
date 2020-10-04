@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/car1"
+    tools:context=".Pay">
+
+
+    <TextView
+        android:id="@+id/carddetail"
+        android:layout_width="291dp"
+        android:layout_height="38dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/paycard_details"
+        android:textColor="#0B0000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.053" />
+
+
+    <EditText
+        android:id="@+id/cardname"
+        android:layout_width="370dp"
+        android:layout_height="53dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/payname_on_card"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="#120101"
+        android:textColorHint="#0E0000"
+        android:textColorLink="#1E88E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.162" />
+
+    <EditText
+        android:id="@+id/getcardnum"
+        android:layout_width="355dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/paycard_number"
+        android:importantForAutofill="no"
+        android:inputType="none|number"
+        android:textColor="#100000"
+        android:textColorHint="#130101"
+        android:textColorLink="#1E88E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.255" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/paycvv"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="#130101"
+        android:textColorHint="#130101"
+        android:textColorLink="#1E88E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="205dp"
+        android:layout_height="58dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/paymm_yy"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColor="#0C0000"
+        android:textColorHint="#130101"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="258dp"
+        android:layout_height="55dp"
+        android:background="@drawable/btn_drawable_selector2"
+        android:text="@string/paypay_amount"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="227dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/quicksand_bold"
+        android:text="@string/paywe_accept"
+        android:textColor="#0E0000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="90dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="128dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:contentDescription="@string/payimg3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/visa" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="90dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:contentDescription="@string/payimg2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.016"
+        app:srcCompat="@drawable/master" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="90dp"
+        android:layout_height="67dp"
+        android:background="@color/common_google_signin_btn_text_dark_default"
+        android:contentDescription="@string/payimg1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/ameri" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

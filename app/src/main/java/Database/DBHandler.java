@@ -160,6 +160,60 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
+    public List readAllInfosearch(String nic){
+
+
+        SQLiteDatabase db = getReadableDatabase();
+
+// Define a projection that specifies which columns from the database
+// you will actually use after this query.
+        String[] projection = {
+                BaseColumns._ID,
+                BOOKUser.User.COLUMN_1,
+                BOOKUser.User.COLUMN_2,
+                BOOKUser.User.COLUMN_3,
+                BOOKUser.User.COLUMN_4,
+
+        };
+
+// Filter results WHERE "title" = 'My Title'
+        String selection =BOOKUser.User.COLUMN_3 + "  LIKE ?";
+        String[] selectionArgs = { nic};
+
+// How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                BOOKUser.User.COLUMN_2 + " ASC";
+
+        Cursor cursor = db.query(
+                BOOKUser.User.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                selection,              // The columns for the WHERE clause
+                selectionArgs,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+
+
+        List UserInfo = new ArrayList<>();
+        while(cursor.moveToNext()) {
+            String NIC = cursor.getString(cursor.getColumnIndexOrThrow(BOOKUser.User.COLUMN_3));
+            String User = cursor.getString(cursor.getColumnIndexOrThrow(BOOKUser.User.COLUMN_1));
+            String Email = cursor.getString(cursor.getColumnIndexOrThrow(BOOKUser.User.COLUMN_2));
+            String MOBILE = cursor.getString(cursor.getColumnIndexOrThrow(BOOKUser.User.COLUMN_4));
+
+            UserInfo.add(NIC);//0
+            UserInfo.add(User);//1
+            UserInfo.add(Email);//2
+            UserInfo.add(MOBILE);//3
+
+        }
+        cursor.close();
+        return UserInfo;
+
+    }
+
 
     public void deleteinfro(String name){
 
@@ -174,6 +228,52 @@ public class DBHandler extends SQLiteOpenHelper {
                 BOOKUser.User.TABLE_NAME, selection, selectionArgs);
 
     }
+
+
+
+    public ArrayList readAllInf1 (){
+
+        String username = "avinash";
+        SQLiteDatabase db = getReadableDatabase();
+
+        // Define a projection that specifies which columns from the database
+        // you will actually use after this query.
+        String[] projection = {
+                BaseColumns._ID,
+                BOOKUser.User.COLUMN_1,
+                BOOKUser.User.COLUMN_2,
+                BOOKUser.User.COLUMN_3,
+                BOOKUser.User.COLUMN_4,
+
+        };
+
+        // Filter results WHERE "title" = 'My Title'
+        String selection = BOOKUser.User.COLUMN_1 + " = ?";
+        String[] selectionArgs = { username };
+
+        // How you want the results sorted in the resulting Cursor
+        String sortOrder =
+                BOOKUser.User.COLUMN_1 + " ASC";
+
+        Cursor cursor = db.query(
+                BOOKUser.User.TABLE_NAME,   // The table to query
+                projection,             // The array of columns to return (pass null to get all)
+                null,              // The columns for the WHERE clause
+                null,          // The values for the WHERE clause
+                null,                   // don't group the rows
+                null,                   // don't filter by row groups
+                sortOrder               // The sort order
+        );
+
+        ArrayList usernames = new ArrayList<>();
+        while(cursor.moveToNext()) {
+            String user = cursor.getString(cursor.getColumnIndexOrThrow(BOOKUser.User.COLUMN_1));
+            usernames.add(user);
+        }
+        cursor.close();
+        return usernames;
+    }
+
 
 }
 
