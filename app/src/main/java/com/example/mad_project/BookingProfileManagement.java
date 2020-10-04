@@ -33,7 +33,7 @@ public class BookingProfileManagement extends AppCompatActivity {
         mobile = findViewById(R.id.Editmobile);
 
         bookUpdate = findViewById(R.id.EDitUpdatebtn);
-        search = findViewById(R.id.buttonsearchj);
+        //search = findViewById(R.id.buttonsearchj);
         Delete = findViewById(R.id.delete);
 
         Intent intent = getIntent();
@@ -98,7 +98,7 @@ public class BookingProfileManagement extends AppCompatActivity {
         });
 
 
-        search.setOnClickListener(new View.OnClickListener() {
+        /*search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -120,7 +120,7 @@ public class BookingProfileManagement extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
 
         Delete.setOnClickListener(new View.OnClickListener() {
             @Override
