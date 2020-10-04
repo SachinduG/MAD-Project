@@ -1,9 +1,11 @@
 package com.example.mad_project;
 
+import androidx.annotation.BoolRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Trace;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,6 +18,8 @@ public class BookingHome extends AppCompatActivity {
 
     TextView name,email,nic,mobile;
     Button book;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,25 +85,33 @@ public class BookingHome extends AppCompatActivity {
                 else {
 
 
+                    Boolean CHeckNIC = dbHandler.checkNIC(nic.getText().toString());
+
+                    if (CHeckNIC.equals(true)) {
 
 
+                        long newdetails = dbHandler.Addinformation(name.getText().toString(), email.getText().toString(), nic.getText().toString(), mobile.getText().toString());
+
+                        Intent intent = new Intent(getApplicationContext(), BookingProfileManagement.class);
+                        intent.putExtra("name", name.getText().toString());
+                        intent.putExtra("email", email.getText().toString());
+                        intent.putExtra("nic", nic.getText().toString());
+                        intent.putExtra("mobile", mobile.getText().toString());
+
+                        Toast.makeText(BookingHome.this, "added sucessfully" + newdetails, Toast.LENGTH_SHORT).show();
+
+                        startActivity(intent);
 
 
-                    long newdetails = dbHandler.Addinformation(name.getText().toString(),email.getText().toString(),nic.getText().toString(),mobile.getText().toString());
+                    }
 
-                    Intent intent  = new Intent(getApplicationContext(),BookingProfileManagement.class);
-                    intent.putExtra("name",name.getText().toString());
-                    intent.putExtra("email",email.getText().toString());
-                    intent.putExtra("nic",nic.getText().toString());
-                    intent.putExtra("mobile",mobile.getText().toString());
+                    else {
 
-                    Toast.makeText(BookingHome.this, "added sucessfully"+newdetails, Toast.LENGTH_SHORT).show();
-
-                    startActivity(intent);
+                        Toast.makeText(BookingHome.this, "NIC already exit", Toast.LENGTH_SHORT).show();
+                    }
 
 
                 }
-
 
 
 

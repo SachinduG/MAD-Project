@@ -56,6 +56,7 @@ public class ExampleUnitTest {
 
     }
 
+
     @Test
     public void addparkingpay1() {
         float result = parkingpayment.getamount(2);
@@ -73,4 +74,5 @@ public class ExampleUnitTest {
         float result = payment.bookpaymentCal(6);
         assertEquals(600,result,0.001);
     }
+
 }
