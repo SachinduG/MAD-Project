@@ -18,6 +18,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -25,7 +26,6 @@
         android:layout_width="190dp"
         android:layout_height="52dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="124dp"
         android:onClick="add"
         android:text="@string/chargers"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,39 +39,43 @@
         android:id="@+id/addme"
         android:layout_width="337dp"
         android:layout_height="72dp"
-        android:layout_marginTop="250dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginTop="32dp"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calme" />
 
     <Button
         android:id="@+id/button10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="@string/Bookpay"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintTop_toBottomOf="@+id/addme"
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="144dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="145dp"
         android:layout_marginBottom="32dp"
-        android:text="Book payment "
+        android:fontFamily="@font/aclonica"
+        android:text="Book Payment "
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/hoursme"
-        app:layout_constraintEnd_toEndOf="@+id/addme"
-        app:layout_constraintHorizontal_bias="0.322"
-        app:layout_constraintStart_toStartOf="@+id/hoursme"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button11"
