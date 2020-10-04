@@ -83,10 +83,10 @@
         android:id="@+id/button11"
         android:layout_width="120dp"
         android:layout_height="56dp"
-        android:layout_marginTop="608dp"
+        android:layout_marginTop="616dp"
         android:text="@string/BOOkuserlist"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
