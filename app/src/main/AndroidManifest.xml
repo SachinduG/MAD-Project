@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:label">
-i
+
         <activity android:name=".EditPArking"></activity>
         <activity android:name=".Pay" />
         <activity
@@ -34,12 +34,11 @@ i
             android:name=".BOOKPayment"
             android:theme="@style/AppTheme2" />
         <activity android:name=".Welcome" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ForgotPassword" />
         <activity android:name=".history" />
         <activity android:name=".EditAccount" />
@@ -56,11 +55,6 @@ i
         <activity android:name=".Main" />
         <activity android:name=".MapNavigate" />
 
-
-
-        <activity android:name=".Pay"></activity>
-       
-       
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
