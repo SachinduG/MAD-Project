@@ -21,7 +21,7 @@
         <activity android:name=".AddparkingDelete"></activity>
         <activity android:name=".Addparkingpayment"></activity>
         <activity android:name=".Addparking"></activity>
-        <activity android:name=".Welcome1"></activity>
+        <activity android:name=".Welcome1"/>
         <activity android:name=".SearchPark"></activity>
         <activity android:name=".Welcome"/>
         <activity android:name=".BOOKPayment" android:theme="@style/AppTheme2" ></activity>
@@ -33,11 +33,12 @@
         <activity android:name=".Feedback" ></activity>
         <activity android:name=".BookingProfileManagement" android:theme="@style/AppTheme2" ></activity>
         <activity android:name=".BookingHome" android:theme="@style/AppTheme2">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
 
 
         <activity android:name=".SignUp"></activity>

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
         android:text="Users List"
-        android:textColor="#E38008"
+        android:textColor="#A6070400"
         android:textSize="36sp" />
 
     <ListView

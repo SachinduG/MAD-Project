@@ -9,106 +9,76 @@
     tools:context=".BookingProfileManagement">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlineEdit1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
+    <TextView
+        android:id="@+id/BE"
+        android:layout_width="310dp"
         android:layout_height="0dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="445dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/aclonica"
+        android:text="Booking profile"
+        android:textAlignment="center"
+        android:textColor="#221D1D"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/EDITBnamee"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
         android:hint="@string/BOOkname"
-        android:padding="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/delete"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EDITBnamee"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlineEdit2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="202dp"
-        android:layout_marginBottom="113dp"
-        android:hint="@string/BOOKemail"
-        android:padding="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/outlineEdit4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EDITBEmail"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlineEdit3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="340dp"
-        android:hint="@string/BOOKNIC"
-        android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText=" nic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/EDITBNic"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlineEdit4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="96dp"
-        android:hint="@string/BOOKmobile"
-        android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText=" mobile"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlineEdit2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.189" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Editmobile"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/rounded_corner" />
+    <EditText
+        android:id="@+id/EDITBEmail"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKemail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/EDITBNic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EDITBnamee"
+        app:layout_constraintVertical_bias="0.488" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    <EditText
+        android:id="@+id/EDITBNic"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="292dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKNIC"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Editmobile"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKmobile"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.751" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/EDitUpdatebtn"
@@ -121,22 +91,7 @@
         android:text="@string/BUpdate"
         app:backgroundTint="#450CF1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/outlineEdit4" />
-
-    <TextView
-        android:id="@+id/EditUpdateprofile"
-        android:layout_width="310dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Booking Profile"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/delete"
@@ -147,8 +102,10 @@
         android:layout_marginBottom="23dp"
         android:text="@string/Bdelete"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/outlineEdit4" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
