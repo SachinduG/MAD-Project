@@ -75,10 +75,10 @@ public class BookingHome extends AppCompatActivity {
 
                     mobile.setError("invalid mobile");
                 }
-                else if(mobile.length() < 10){
+                else if(mobile.length()  > 10){
                     mobile.setError("mobile must be 10 number ");
                 }
-                else if( nic.length() <= 10)
+                else if( nic.length() > 10)
                 {
                     nic.setError("invalid NIC");
                 }

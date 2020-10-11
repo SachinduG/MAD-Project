@@ -15,6 +15,9 @@
         android:theme="@style/AppTheme"
         tools:replace="android:label">
 
+
+
+
         <activity android:name=".EditPArking"></activity>
         <activity android:name=".Pay" />
         <activity
