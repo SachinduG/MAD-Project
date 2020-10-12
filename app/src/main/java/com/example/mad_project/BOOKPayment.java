@@ -64,7 +64,7 @@ public class BOOKPayment extends AppCompatActivity {
            // int ammount = convertIN * 100 ;
 
 
-            cal.setText( convertIN + " charge "  +" = " +(bookpaymentCal(convertIN)));
+            cal.setText(   " RS. "  +"  " +(bookpaymentCal(convertIN)));
 
 
 

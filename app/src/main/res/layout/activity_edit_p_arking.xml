@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/car1"
-    tools:context=".Addparking">
+    tools:context=".EditPArking">
 
     <TextView
         android:id="@+id/tpoic1"
         android:layout_width="357dp"
         android:layout_height="45dp"
         android:fontFamily="monospace"
-        android:text="@string/addparkingHeader"
+        android:text="Update Parking Lot "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#1B0101"
         android:textSize="24sp"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.061" />
 
     <EditText
-        android:id="@+id/emid"
+        android:id="@+id/edtemail"
         android:layout_width="342dp"
         android:layout_height="47dp"
         android:layout_marginBottom="564dp"
@@ -42,11 +42,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/townid"
+        android:id="@+id/edttown"
         android:layout_width="346dp"
         android:layout_height="46dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="386dp"
+        android:layout_marginBottom="476dp"
         android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
@@ -55,16 +56,16 @@
         android:inputType="textPersonName"
         android:textColorHint="#0C0000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/emid"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emid"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/addid"
+        android:id="@+id/edtaddress"
         android:layout_width="347dp"
         android:layout_height="45dp"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="334dp"
+        android:layout_marginBottom="408dp"
         android:autofillHints=""
         android:background="@drawable/rounded_corner"
         android:ems="10"
@@ -73,12 +74,32 @@
         android:inputType="textPersonName"
         android:textColorHint="#170101"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/townid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/townid"
         app:layout_constraintVertical_bias="0.0" />
 
+    <EditText
+        android:id="@+id/edtmob"
+        android:layout_width="347dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/addmobile"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:textColorHint="#200101"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/addid"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.516" />
+
     <TextView
-        android:id="@+id/txtaddid"
+        android:id="@+id/txtedt"
         android:layout_width="330dp"
         android:layout_height="51dp"
         android:background="@drawable/rounded_corner"
@@ -89,43 +110,14 @@
         android:textColor="#0B0000"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/mobile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tpoic1"
         app:layout_constraintVertical_bias="0.592" />
 
     <EditText
-        android:id="@+id/mobile"
-        android:layout_width="347dp"
-        android:layout_height="45dp"
-        android:background="@drawable/rounded_corner"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="@string/addmobile"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:textColorHint="#200101"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/addid"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/addparkid"
-        android:layout_width="268dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="388dp"
-        android:background="@drawable/btn_drawable_selector3"
-
-        android:text="ADD PARK"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/emid"
-        app:layout_constraintVertical_bias="0.593" />
-
-    <EditText
-        android:id="@+id/descrip"
+        android:id="@+id/edtdis"
         android:layout_width="335dp"
         android:layout_height="50dp"
         android:layout_marginStart="35dp"
@@ -144,16 +136,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/edtbtn"
+        android:layout_width="268dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/btn_drawable_selector3"
+        android:text="@string/edtedit_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emid"
+        app:layout_constraintVertical_bias="0.593" />
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
-
-
-
-
-
-
-

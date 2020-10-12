@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 public class AccountControl extends AppCompatActivity {
     Button button;
@@ -76,7 +75,7 @@ public class AccountControl extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        Intent intent = new Intent(AccountControl.this, Addparking.class);
+                        Intent intent = new Intent(AccountControl.this, OwnParkList.class);
                         startActivity(intent);
                     }
                 }

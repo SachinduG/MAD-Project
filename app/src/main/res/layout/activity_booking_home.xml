@@ -8,144 +8,98 @@
     android:background="@drawable/carparking123"
     tools:context=".BookingHome">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outline1"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="396dp"
-        android:hint="@string/BOOkname"
-        android:padding="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/B"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/BookName"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/input_design" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outline2"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="160dp"
-        android:hint="@string/BOOKemail"
-        android:padding="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/BookEmail"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/input_design" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outline3"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="160dp"
-        android:hint="@string/BOOKNIC"
-        android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText=" NIC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.584">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/BookNIC"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/input_design" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outline4"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="413dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="464dp"
-        android:hint="@string/BOOKmobile"
-        android:padding="30dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
-        app:helperText=" mobile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/BookMobile"
-            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
-            android:layout_width="347dp"
-            android:layout_height="66dp"
-            android:background="@drawable/input_design" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/BookSubmit1"
         style="@style/Widget.MaterialComponents.ActionBar.Solid"
-        android:layout_width="104dp"
-        android:layout_height="48dp"
+        android:layout_width="92dp"
+        android:layout_height="51dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="45dp"
         android:layout_marginEnd="120dp"
         android:layout_marginBottom="40dp"
         android:text="Submit"
         app:backgroundTint="#450CF1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outline4"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
     <TextView
         android:id="@+id/B"
         android:layout_width="310dp"
-        android:layout_height="49dp"
+        android:layout_height="0dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/aclonica"
         android:text="Booking Home"
         android:textAlignment="center"
-        android:textColor="#F89E19"
+        android:textColor="#221D1D"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/BookName"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOkname"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/BookEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/B"
+        app:layout_constraintVertical_bias="0.237" />
+
+
+    <EditText
+        android:id="@+id/BookEmail"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKemail"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/BookNIC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookName"
+        app:layout_constraintVertical_bias="0.401" />
+
+    <EditText
+        android:id="@+id/BookNIC"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKNIC"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/BookMobile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookEmail"
+        app:layout_constraintVertical_bias="0.58" />
+
+    <EditText
+        android:id="@+id/BookMobile"
+        android:layout_width="379dp"
+        android:layout_height="67dp"
+        android:background="@drawable/rounded_corner"
+        android:ems="10"
+        android:hint="@string/BOOKmobile"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/BookSubmit1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookNIC"
+        app:layout_constraintVertical_bias="0.771" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

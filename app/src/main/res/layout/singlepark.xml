@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="60dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:id="@+id/discripid"
+        android:layout_width="261dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rectangle_mati"
+        android:textColor="#150202"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/addressid"
+        app:layout_constraintTop_toBottomOf="@+id/mobileid" />
+
+    <TextView
+        android:id="@+id/mobileid"
+        android:layout_width="278dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rectangle_mati"
+        android:textColor="#150101"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/discripid"
+        app:layout_constraintTop_toBottomOf="@+id/stownid" />
+
+    <TextView
+        android:id="@+id/emailid"
+        android:layout_width="272dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rectangle_mati"
+        android:gravity="center"
+        android:textColor="#0E0101"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/stownid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addressid"
+        android:layout_width="272dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_mati"
+        android:textColor="#1C0101"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/discripid" />
+
+    <TextView
+        android:id="@+id/stownid"
+        android:layout_width="273dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_mati"
+        android:textColor="#200202"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/mobileid"
+        app:layout_constraintTop_toBottomOf="@+id/emailid" />
+</androidx.constraintlayout.widget.ConstraintLayout>

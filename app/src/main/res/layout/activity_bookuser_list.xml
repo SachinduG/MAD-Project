@@ -5,17 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/carparking123"
     tools:context=".BookuserList">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:fontFamily="@font/aclonica"
+        android:text="Users List"
+        android:textColor="#A6070400"
         android:textSize="36sp" />
 
     <ListView
         android:id="@+id/listBook1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 </LinearLayout>

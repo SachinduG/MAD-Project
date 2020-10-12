@@ -3,7 +3,7 @@ package com.example.mad_project;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,26 +12,38 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mad_project.model.Park;
+
 public class Addparking extends AppCompatActivity {
 
     EditText email,town,address,mobile,description;
-    Button done;
-    DatabaseHelper db;
+
+    TextView rateperhour;
+    DbHandler dbHandler;
+    Button add;
+    private Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addparking);
 
-        db = new DatabaseHelper(this);
+
         email = findViewById(R.id.emid);
         town = findViewById(R.id.townid);
         address = findViewById(R.id.addid);
         mobile = findViewById(R.id.mobile);
         description = findViewById(R.id.descrip);
-        done = findViewById(R.id.button);
 
-        done.setOnClickListener(new View.OnClickListener() {
+        rateperhour =findViewById(R.id.txtaddid);
+        add = findViewById(R.id.addparkid);
+
+        context = this;
+        dbHandler = new DbHandler(context);
+
+
+        add.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -39,31 +51,31 @@ public class Addparking extends AppCompatActivity {
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 String mobilePattern = "[a-zA-Z]+";
 
-                String Email = email.getText().toString().trim();
-                String Town = town.getText().toString().trim();
-                String Address = address.getText().toString().trim();
-                String Mobile = mobile.getText().toString().trim();
-                String Description = description.getText().toString().trim();
+                String useremail = email.getText().toString();
+                String usertown = town.getText().toString();
+                String useraddress =  address.getText().toString();
+                String usermobile = mobile.getText().toString();
+                String userdescrip = description.getText().toString();
 
 
-                if (Email.isEmpty()) {
+                if (useremail.isEmpty()) {
                     email.setError("Enter the Email Address");
 
-                } else if (Town.isEmpty()) {
+                } else if (usertown.isEmpty()) {
                     town.setError("Enter your Town");
 
-                } else if (Address.isEmpty()) {
+                } else if (useraddress.isEmpty()) {
                     address.setError("Enter the Address");
 
-                } else if (Mobile.isEmpty()) {
+                } else if (usermobile.isEmpty()) {
                     mobile.setError("Enter the Mobile Number");
 
 
-                } else if (Description.isEmpty()) {
+                } else if (userdescrip.isEmpty()) {
                     description.setError("Enter a description");
 
 
-                } else if (Mobile.length() < 10) {
+                } else if (usermobile.length() < 10) {
                     mobile.setError("Mobile Number must be => 10 numbers!");
 
 
@@ -75,42 +87,24 @@ public class Addparking extends AppCompatActivity {
 
                 } else {
 
-
-                    Boolean insert = db.parkinsert(Email, Town, Address, Mobile, Description);
-
-                    if (insert.equals(true)) {
-
+                    Park park = new Park(useremail,usertown,useraddress,usermobile,userdescrip);
+                    dbHandler.addpark(park);
                         Toast.makeText(getApplicationContext(), "Your Park added Successfully", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(getApplicationContext(), Addparkingpayment.class);
                         startActivity(intent);
-                        clearControls();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Add Parking Unsucessfull", Toast.LENGTH_SHORT).show();
-                    }
 
+                    }
 
                 }
 
 
-            }
+
 
         });
-    }
-    private void clearControls() {
-        email.setText("");
-        town.setText("");
-        address.setText("");
-        mobile.setText("");
-        description.setText("");
-
-
-    }
 
 
 }
 
-
-
-
+}
 
