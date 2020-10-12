@@ -164,8 +164,8 @@ public class EditAccount extends AppCompatActivity {
                 }
                 StringBuffer buffer = new StringBuffer();
                 while(res.moveToNext()){
-                    buffer.append("Name :"+res.getString(0)+"\n");
-                    buffer.append("Email :"+res.getString(1)+"\n");
+                    buffer.append("Email :"+res.getString(0)+"\n");
+                    buffer.append("Name :"+res.getString(1)+"\n");
                     buffer.append("Mobile :"+res.getString(2)+"\n");
                     buffer.append("NIC :"+res.getString(3)+"\n");
                     buffer.append("Address:"+res.getString(4)+"\n");
