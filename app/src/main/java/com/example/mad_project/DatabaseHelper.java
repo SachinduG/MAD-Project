@@ -18,7 +18,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table User(email text primary key, name text, mobile text, nic text, address text, password text)");
         db.execSQL("Create table Feedback(email text primary key, name text, message text)");
-        db.execSQL("Create table Park(email text primary key, town text, address text, mobile text, description text)");
+       // db.execSQL("Create table Park(email text primary key, town text, address text, mobile text, description text)");
 
 
         //db.execSQL("Create table Addparking(email text primary key,town text,address text,description text,image blob)");
@@ -31,7 +31,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists User");
         db.execSQL("drop table if exists Feedback");
-        db.execSQL("drop table if exists Park");
+        //db.execSQL("drop table if exists Park");
 
 
 
@@ -57,7 +57,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    public Boolean parkinsert(String email, String town, String address, String mobile, String description) {
+   /* public Boolean parkinsert(String email, String town, String address, String mobile, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
 
@@ -71,7 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return false;
         else
             return true;
-    }
+    }*/
 
 
 
@@ -111,7 +111,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
-    public void parkupdate(String email, String town, String address, String mobile, String description) {
+   /* public void parkupdate(String email, String town, String address, String mobile, String description) {
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues contentValues = new ContentValues();
@@ -125,7 +125,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.update("Park", contentValues, "email = ?", new String[]{email});
         db.close();
-    }
+    }*/
 
 
 
@@ -141,7 +141,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public void parkdelete(String email) {
+   /* public void parkdelete(String email) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{email});
@@ -149,7 +149,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             long result = db.delete("Park", "email=?", new String[]{email});
         }
 
-    }
+    }*/
 
     public Cursor get() {
         SQLiteDatabase db = this.getWritableDatabase();
