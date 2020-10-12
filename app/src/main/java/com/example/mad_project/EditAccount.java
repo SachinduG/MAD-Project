@@ -24,6 +24,7 @@ public class EditAccount extends AppCompatActivity {
     Button Update, delete,view;
 
     DatabaseHelper db;
+    SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class EditAccount extends AppCompatActivity {
         delete = findViewById(R.id.button7);
         view = findViewById(R.id.button8);
 
+        sessionManager = new SessionManager(getApplicationContext());
 
        // final Intent previousIntent = getIntent();
         //String email = previousIntent.getStringExtra("email");
@@ -100,6 +102,9 @@ public class EditAccount extends AppCompatActivity {
                 } else if (fMobile.getText().toString().length() < 10) {
                     fMobile.setError("Mobile Number must be => 10 characters!");
 
+                } else if (fNic.getText().toString().length() < 9) {
+                    fNic.setError("Nic Number must be => 9 characters!");
+
                 }else if(!fEmail.getText().toString().trim().matches(emailPattern)){
                     fEmail.setError("Invalid Email Address!");
 
@@ -148,8 +153,32 @@ public class EditAccount extends AppCompatActivity {
                 alertDialog.show();
             }
         });
-    }
-}
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Cursor res = db.getdata();
+                if(res.getCount()==0){
+                    Toast.makeText(EditAccount.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                StringBuffer buffer = new StringBuffer();
+                while(res.moveToNext()){
+                    buffer.append("Name :"+res.getString(0)+"\n");
+                    buffer.append("Email :"+res.getString(1)+"\n");
+                    buffer.append("Mobile :"+res.getString(2)+"\n");
+                    buffer.append("NIC :"+res.getString(3)+"\n");
+                    buffer.append("Address:"+res.getString(4)+"\n");
+                    buffer.append("Password :"+res.getString(5)+"\n\n");
+                }
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(EditAccount.this);
+                builder.setCancelable(true);
+                builder.setTitle("User Entries");
+                builder.setMessage(buffer.toString());
+                builder.show();
+            }        });
+    }}
 
 
 

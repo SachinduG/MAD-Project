@@ -88,7 +88,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-   
     
 
 
@@ -130,12 +129,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public void delete(String email) {
+    public Boolean delete(String email) {
 
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("Select * from User where email = ?", new String[]{email});
         if (cursor.getCount() > 0) {
             long result = db.delete("User", "email=?", new String[]{email});
+            if (result == -1) {
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
         }
 
     }
@@ -151,7 +157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }*/
 
-    public Cursor get() {
+    public Cursor getdata() {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "Select * from User";
         String lastrecord = " SELECT * FROM  + User + WHERE email = ?";
@@ -306,9 +312,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-    public Cursor getdata(String mobile) {
+    public Cursor getdata(String email) {
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("Select * from User where mobile=?", new String[]{mobile});
+        Cursor cursor = DB.rawQuery("Select * from User where email=?", new String[]{email});
         return cursor;
 
 
