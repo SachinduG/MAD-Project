@@ -75,7 +75,7 @@ public class AccountControl extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        Intent intent = new Intent(AccountControl.this, EditPArking.class);
+                        Intent intent = new Intent(AccountControl.this, OwnParkList.class);
                         startActivity(intent);
                     }
                 }

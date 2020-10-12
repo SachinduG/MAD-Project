@@ -117,6 +117,8 @@
     <string name="payimg3">payimg3</string>
     <string name="payimage4">payimage4</string>
     <string name="edtedit_details">Edit Details</string>
+    <string name="ownadd_park">ADD PARK</string>
+    <string name="ownyou_have_add_x_parks">You have add x Parks</string>
 
 
 </resources>

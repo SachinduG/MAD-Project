@@ -109,13 +109,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addparkid"
         android:layout_width="268dp"
         android:layout_height="63dp"
         android:layout_marginTop="388dp"
         android:background="@drawable/btn_drawable_selector3"
 
-        android:text="@string/addpark"
+        android:text="ADD PARK"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

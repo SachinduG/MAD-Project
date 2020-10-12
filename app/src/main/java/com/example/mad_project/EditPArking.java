@@ -3,20 +3,27 @@ package com.example.mad_project;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.DialogInterface;
+
+import com.example.mad_project.model.Park;
 
 public class EditPArking extends AppCompatActivity {
 
     EditText  email,town,address,mobile,description;
-    Button Update, delete,view;
+    Button Update;
+    Context context;
+    DbHandler dbHandler;
+    TextView rateperhour;
 
-    DatabaseHelper db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,23 +31,29 @@ public class EditPArking extends AppCompatActivity {
         setContentView(R.layout.activity_edit_p_arking);
 
 
-        //  databaseHelper = new DatabaseHelper(this);
-        // db = databaseHelper.getWritableDatabase();
-        db = new DatabaseHelper(this);
-        email = findViewById(R.id.emid);
-        town = findViewById(R.id.townid);
-        address = findViewById(R.id.addid);
-        mobile = findViewById(R.id.mobile);
-        description = findViewById(R.id.descrip);
 
+        context = this;
+        dbHandler = new DbHandler(context);
+
+        email = findViewById(R.id.edtemail);
+        town = findViewById(R.id.edttown);
+        address = findViewById(R.id.edtaddress);
+        mobile= findViewById(R.id.edtmob);
+        description=findViewById(R.id.edtdis);
+        rateperhour =findViewById(R.id.txtedt);
         Update = findViewById(R.id.edtbtn);
-        delete = findViewById(R.id.adddelt);
-        view = findViewById(R.id.button8);
+
+        final String id = getIntent().getStringExtra("id");
+        Park park = dbHandler.getsinglepark(Integer.parseInt(id));
+
+        email.setText(park.getEmail());
+        town.setText(park.getTown());
+        address.setText(park.getAddress());
+        mobile.setText(park.getMobile());
+        description.setText(park.getDescription());
 
 
-        // final Intent previousIntent = getIntent();
-        //String email = previousIntent.getStringExtra("email");
-        // final CustomerProfile customerProfile = databaseHelper.findCustomer(email, db);
+
 
 
 
@@ -60,6 +73,13 @@ public class EditPArking extends AppCompatActivity {
                 String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
                 String mobilePattern = "[a-zA-Z]+";
 
+                String edemail  = email.getText().toString();
+                String edaddress  = address.getText().toString();
+                String edtown = town.getText().toString();
+                String edmobile  = mobile.getText().toString();
+                String eddescrip  = description.getText().toString();
+
+
                 if (email.toString().equals("")) {
                     email.setError("Enter the Email Address");
 
@@ -77,7 +97,7 @@ public class EditPArking extends AppCompatActivity {
                     description.setError("Enter the description");
 
 
-                } else if (mobile.length() < 10) {
+                } else if (edmobile.length() < 10) {
                     mobile.setError("Mobile Number must be => 10 numbers!");
 
 
@@ -89,46 +109,19 @@ public class EditPArking extends AppCompatActivity {
 
                 } else {
 
-                    db.parkupdate( email.getText().toString(),town.getText().toString(),address.getText().toString(),mobile.getText().toString(), description.getText().toString());
 
+                    Park park = new Park(Integer.parseInt(id),edemail,edaddress,edtown,edmobile,eddescrip);
+                    int state = dbHandler.parkupdate(park);
+                    System.out.println(state);
                     Toast.makeText(EditPArking.this, "Entry Updated", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), Main.class);
-                    startActivity(intent);
+                    startActivity(new Intent(context,OwnParkList.class));
+
+
 
                 }
             }
         });
 
-        delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                builder.setTitle("Delete Your Park");
-                builder.setMessage("Are you sure to delete ?");
-                builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        String Email = email.getText().toString();
-                        db.parkdelete(Email);
-
-                        Toast.makeText(EditPArking.this, "Account Deleted", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(getApplicationContext(), Main.class));
-                        finish();
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dialogInterface.cancel();
-
-                    }
-                });
-                AlertDialog alertDialog = builder.create();
-                alertDialog.show();
-            }
-        });
     }
 }

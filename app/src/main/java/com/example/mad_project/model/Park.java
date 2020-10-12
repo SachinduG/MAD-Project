@@ -1,33 +1,28 @@
 package com.example.mad_project.model;
 
 public class Park {
+    private String email,town,address,mobile, description;
     private int id;
-    private String email, town, address, mobile, description;
-    private long started, finished;
 
-    public Park() {
+    public Park(){
 
     }
 
-    public Park(int id, String email, String town, String address, String mobile, String description, long started, long finished) {
+    public Park(int id,String email, String town, String address, String mobile, String description) {
         this.id = id;
         this.email = email;
         this.town = town;
         this.address = address;
         this.mobile = mobile;
         this.description = description;
-        this.started = started;
-        this.finished = finished;
     }
 
-    public Park(String email, String town, String address, String mobile, String description, long started, long finished) {
+    public Park(String email, String town, String address, String mobile, String description) {
         this.email = email;
         this.town = town;
         this.address = address;
         this.mobile = mobile;
         this.description = description;
-        this.started = started;
-        this.finished = finished;
     }
 
     public int getId() {
@@ -76,22 +71,7 @@ public class Park {
 
     public void setDescription(String description) {
         this.description = description;
-    }
 
-    public long getStarted() {
-        return started;
-    }
-
-    public void setStarted(long started) {
-        this.started = started;
-    }
-
-    public long getFinished() {
-        return finished;
-    }
-
-    public void setFinished(long finished) {
-        this.finished = finished;
     }
 }
 

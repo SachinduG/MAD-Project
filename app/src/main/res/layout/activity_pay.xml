@@ -101,7 +101,7 @@
         app:layout_constraintVertical_bias="0.441" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/paybt"
         android:layout_width="258dp"
         android:layout_height="55dp"
         android:background="@drawable/btn_drawable_selector2"
